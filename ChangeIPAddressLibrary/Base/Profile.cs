@@ -8,4 +8,5 @@ namespace ChangeIPAddressLibrary.Base
     class Profile
     {
     }
+
 }
