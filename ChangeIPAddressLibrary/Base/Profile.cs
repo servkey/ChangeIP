@@ -7,6 +7,7 @@ namespace ChangeIPAddressLibrary.Base
 {
     class Profile
     {
+        private String name;
     }
 
 }
