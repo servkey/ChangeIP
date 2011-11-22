@@ -14,6 +14,11 @@ namespace ChangeIPAdress.Win
         public FrmMain()
         {
             InitializeComponent();
+
+            if (Properties.Settings.Default.Language.Equals("es-MX"))            
+                spanishStripMenuItem.Checked = true;
+            else
+                englishStripMenuItem.Checked = true;
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,6 +70,34 @@ namespace ChangeIPAdress.Win
         private void rdbSpecifyDNS_CheckedChanged(object sender, EventArgs e)
         {
             grpDNSServer.Enabled = !grpDNSServer.Enabled;
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            //Radio button on menu...
+            spanishStripMenuItem.Checked = (sender == spanishStripMenuItem);
+            englishStripMenuItem.Checked = (sender == englishStripMenuItem);
+            saveSetting();
+        }
+
+
+        private void saveSetting()
+        {
+            if (spanishStripMenuItem.Checked)
+                Properties.Settings.Default.Language = "es-MX";
+            else
+                Properties.Settings.Default.Language = "en";
+            Properties.Settings.Default.Save();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

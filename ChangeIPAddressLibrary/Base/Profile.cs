@@ -8,6 +8,18 @@ namespace ChangeIPAddressLibrary.Base
     class Profile
     {
         private String name;
+
+        public String Name {
+            set
+            {
+                name = value;
+            }
+            get {
+                return name;
+            }
+
+        }
+
     }
 
 }
