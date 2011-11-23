@@ -24,6 +24,7 @@ namespace ChangeIPAdress.Win
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
