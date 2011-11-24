@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ChangeIPAddressLibrary.Base
 {
-    class Profile
+    public class Profile
     {
         private String name;
 
