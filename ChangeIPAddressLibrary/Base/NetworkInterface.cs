@@ -15,6 +15,7 @@ namespace ChangeIPAddressLibrary.Base
         private String settingID;
         private String description;
         private String macAddress;
+        private String ipAddress;
 
         public String Caption {
             set { caption = value; }
@@ -43,6 +44,12 @@ namespace ChangeIPAddressLibrary.Base
         {
             set { macAddress = value; }
             get { return macAddress; }
+        }
+
+        public String IPAddress
+        {
+            set { ipAddress = value; }
+            get { return ipAddress; }
         }
     }
 }
