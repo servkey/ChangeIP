@@ -121,7 +121,7 @@
     <value>Cambiar dirección IP</value>
   </data>
   <data name="grpDetailsTxt" xml:space="preserve">
-    <value>Details</value>
+    <value>Detalles</value>
   </data>
   <data name="grpProfiles" xml:space="preserve">
     <value>Select Profile</value>
@@ -130,31 +130,31 @@
     <value>Gateway</value>
   </data>
   <data name="lblIPAddressTxt" xml:space="preserve">
-    <value>IP Address</value>
+    <value>Dirección IP</value>
   </data>
   <data name="lblIPSubnetTxt" xml:space="preserve">
-    <value>IP Subnet</value>
+    <value>Máscara</value>
   </data>
   <data name="lblSeparatorTxt" xml:space="preserve">
     <value>----</value>
   </data>
   <data name="lblTDNSServerTxt" xml:space="preserve">
-    <value>DNS Server</value>
+    <value>Servidor DNS</value>
   </data>
   <data name="lblTGatewayTxt" xml:space="preserve">
     <value>Gateway</value>
   </data>
   <data name="lblTIPAddressTxt" xml:space="preserve">
-    <value>IP Address</value>
+    <value>Dirección IP</value>
   </data>
   <data name="lblTNetworkInterfaceCmbTxt" xml:space="preserve">
-    <value>Network Interface</value>
+    <value>Interfaz de red</value>
   </data>
   <data name="lblTNetworkInterfaceTxt" xml:space="preserve">
-    <value>Network Interface</value>
+    <value>Interfaz de red</value>
   </data>
   <data name="lblTProfileTxt" xml:space="preserve">
-    <value>Profile Name</value>
+    <value>Nom. Perfil</value>
   </data>
   <data name="rdbDNSAutomaticallyTxt" xml:space="preserve">
     <value>Obtain DNS Server Address automatically</value>

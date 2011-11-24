@@ -58,5 +58,17 @@ namespace ChangeIPAdress.Properties {
                 this["LanguageEnglish"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\Setting\\settings.s3db")]
+        public string ConnectionDB {
+            get {
+                return ((string)(this["ConnectionDB"]));
+            }
+            set {
+                this["ConnectionDB"] = value;
+            }
+        }
     }
 }

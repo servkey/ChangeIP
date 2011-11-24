@@ -11,5 +11,8 @@
     <Setting Name="LanguageEnglish" Type="System.String" Scope="User">
       <Value Profile="(Default)">en</Value>
     </Setting>
+    <Setting Name="ConnectionDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=.\Setting\settings.s3db</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

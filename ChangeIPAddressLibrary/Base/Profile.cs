@@ -8,6 +8,8 @@ namespace ChangeIPAddressLibrary.Base
     public class Profile
     {
         private String name;
+        private bool dhcpEnabled;
+        private String ip;
 
         public String Name {
             set

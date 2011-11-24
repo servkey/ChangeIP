@@ -10,9 +10,10 @@ namespace ChangeIPAddressLibrary.Core
     {
         private string strConnection;
 
-        public DBLiteConnection()
+        //@"Data Source=.\Setting\settings.s3db";
+        public DBLiteConnection(string strConnection)
         {
-            strConnection = @"Data Source=.\Setting\settings.s3db";
+            this.strConnection = strConnection;
         }
 
         public int ExecuteNonQuery(string sql)
@@ -27,6 +28,23 @@ namespace ChangeIPAddressLibrary.Core
             return rows;
         }
 
+        public SQLiteDataReader ExecuteQuery(string query)
+        {
+            SQLiteConnection con = new SQLiteConnection(strConnection);
+            con.Open();
+            SQLiteCommand cmd = new SQLiteCommand(query, con);
+            SQLiteDataReader datos = cmd.ExecuteReader();
+            // Leemos los datos de forma repetitiva
+            /*while (datos.Read())
+            {
+                string codigo = Convert.ToString(datos[0]);
+                string nombre = Convert.ToString(datos[1]);
+                // Y los mostramos
+                Console.WriteLine("Codigo: {0}, Nombre: {1}",
+                    codigo, nombre);
+            }*/
+            return datos;
+        }
     
     }
 }
