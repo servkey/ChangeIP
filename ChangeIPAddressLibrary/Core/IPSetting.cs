@@ -33,6 +33,10 @@ namespace ChangeIPAddressLibrary.Core
                             result0 += "\nSettingId: " + val;
                             val = managementObject.GetPropertyValue("Description").ToString();
                             result0 += "\nDescription: " + val;
+                            string[] ips = ((string[])managementObject.GetPropertyValue("IPAddress"));
+                            string ip = ips[0].ToString();
+                            val = ip;
+                            result0 += "\nIPAddress: " + val;
                             val = managementObject.GetPropertyValue("MACAddress").ToString();
                             result0 += "\nMACAddress: " + val;
                             result0 += "\n";
@@ -123,6 +127,7 @@ namespace ChangeIPAddressLibrary.Core
                             network.ServiceName = managementObject.GetPropertyValue("ServiceName").ToString();
                             network.SettingID = managementObject.GetPropertyValue("SettingID").ToString();
                             network.Description = managementObject.GetPropertyValue("Description").ToString();
+                            //network.IPAddress = managementObject.GetPropertyValue("IPAddress").ToString();
                             network.MACAddress = managementObject.GetPropertyValue("MACAddress").ToString();
                             networks.Add(network);
                         }

@@ -17,11 +17,12 @@ namespace ChangeIPAdress
         static void Main()
         {
 
-
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             ResourceManager LocRM = new ResourceManager("ChangeIPAdress.Resources.ChangeIPWin", typeof(Win.FrmMain).Assembly);
+            
             // Assign the string for the "strMessage" key to a message box.
-            //MessageBox.Show(LocRM.GetString("strMessage"));
+            MessageBox.Show(LocRM.GetString("FrmMainTxt"));
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

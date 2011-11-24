@@ -61,6 +61,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ChangeIPWin.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\ChangeIPWin.es-MX.Designer.cs">
+      <DependentUpon>ChangeIPWin.es-MX.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Util\TranslateUtil.cs" />
     <Compile Include="Win\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,10 +84,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Resources\ChangeIPWin.es-MX.resx" />
     <EmbeddedResource Include="Resources\ChangeIPWin.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ChangeIPWin.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ChangeIPWin.es-MX.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChangeIPWin.es-MX.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Win\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -149,6 +159,7 @@
     <None Include="Resources\1322026248_Stop.png" />
     <None Include="Resources\new.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
