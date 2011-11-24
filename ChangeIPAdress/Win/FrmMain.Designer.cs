@@ -570,7 +570,7 @@
             this.lblTNetworkInterfaceCmb.Name = "lblTNetworkInterfaceCmb";
             this.lblTNetworkInterfaceCmb.Size = new System.Drawing.Size(92, 13);
             this.lblTNetworkInterfaceCmb.TabIndex = 5;
-            this.lblTNetworkInterfaceCmb.Text = "Network Interface";
+            this.lblTNetworkInterfaceCmb.Text = "Network Interface"; 
             
             // 
             // cmbInterfaces
