@@ -16,17 +16,11 @@ namespace ChangeIPAdress.Win
             InitializeComponent();
 
             if (Properties.Settings.Default.Language.Equals("es-MX"))            
-                spanishStripMenuItem.Checked = true;
+                tsmSpanish.Checked = true;
             else
-                englishStripMenuItem.Checked = true;
+                tsmEnglish.Checked = true;
         }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
+                
         private void FrmMain_Load(object sender, EventArgs e)
         {
             
@@ -34,17 +28,7 @@ namespace ChangeIPAdress.Win
             cmbInterfaces.DisplayMember = "Description";
             txtConsole.Text = ChangeIPAddressLibrary.Core.IPSetting.SetIP("192.168.1.200", "255.255.255.0", "192.168.1.254");
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
+              
         private void rdbSpecifyIp_CheckedChanged(object sender, EventArgs e)
         {
             grpIPAddress.Enabled = !grpIPAddress.Enabled;
@@ -75,16 +59,16 @@ namespace ChangeIPAdress.Win
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            //Radio button on menu...
-            spanishStripMenuItem.Checked = (sender == spanishStripMenuItem);
-            englishStripMenuItem.Checked = (sender == englishStripMenuItem);
+            //Test Radio button on menu...
+            tsmSpanish.Checked = (sender == tsmSpanish);
+            tsmEnglish.Checked = (sender == tsmEnglish);
             saveSetting();
         }
 
 
         private void saveSetting()
         {
-            if (spanishStripMenuItem.Checked)
+            if (tsmSpanish.Checked)
                 Properties.Settings.Default.Language = "es-MX";
             else
                 Properties.Settings.Default.Language = "en";
@@ -99,6 +83,11 @@ namespace ChangeIPAdress.Win
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tabProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

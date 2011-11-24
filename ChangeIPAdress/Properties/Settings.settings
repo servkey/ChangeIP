@@ -5,5 +5,11 @@
     <Setting Name="Language" Type="System.String" Scope="User">
       <Value Profile="(Default)">en</Value>
     </Setting>
+    <Setting Name="LanguageSpanish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">es-MX</Value>
+    </Setting>
+    <Setting Name="LanguageEnglish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">en</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

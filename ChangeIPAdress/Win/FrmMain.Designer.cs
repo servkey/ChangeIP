@@ -29,235 +29,235 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbMain = new System.Windows.Forms.ToolStrip();
+            this.tsbSave = new System.Windows.Forms.ToolStripButton();
+            this.tsbNew = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
+            this.tsbApply = new System.Windows.Forms.ToolStripButton();
+            this.tsbExit = new System.Windows.Forms.ToolStripButton();
+            this.mnuMain = new System.Windows.Forms.MenuStrip();
+            this.tsmProfile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englishStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spanishStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPreference = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmLanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEnglish = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSpanish = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.TabProfiles = new System.Windows.Forms.TabControl();
             this.tabProfile = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.grpProfiles = new System.Windows.Forms.GroupBox();
+            this.lstProfiles = new System.Windows.Forms.ListBox();
+            this.grpDetails = new System.Windows.Forms.GroupBox();
+            this.lblDNSServer = new System.Windows.Forms.Label();
+            this.lblTDNSServer = new System.Windows.Forms.Label();
+            this.lblGateway = new System.Windows.Forms.Label();
+            this.lblTGateway = new System.Windows.Forms.Label();
+            this.lblIPAddress = new System.Windows.Forms.Label();
+            this.lblNetworkInterface = new System.Windows.Forms.Label();
+            this.lblTIPAddress = new System.Windows.Forms.Label();
+            this.lblTNetworkInterface = new System.Windows.Forms.Label();
             this.tabNew = new System.Windows.Forms.TabPage();
             this.rdbSpecifyDNS = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlIPs = new System.Windows.Forms.Panel();
             this.rdbSpecifyIp = new System.Windows.Forms.RadioButton();
-            this.rdbAutomaticIp = new System.Windows.Forms.RadioButton();
+            this.rdbIpAutomatically = new System.Windows.Forms.RadioButton();
             this.grpIPAddress = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtGateway = new System.Windows.Forms.TextBox();
+            this.lblGatewayTxt = new System.Windows.Forms.Label();
+            this.txtIPAddress = new System.Windows.Forms.TextBox();
+            this.lblIPSubnetTxt = new System.Windows.Forms.Label();
+            this.txtIPSubnet = new System.Windows.Forms.TextBox();
+            this.lblIPAddressTxt = new System.Windows.Forms.Label();
             this.txtProfile = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rdbAutomaticDNS = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTProfile = new System.Windows.Forms.Label();
+            this.rdbDNSAutomatically = new System.Windows.Forms.RadioButton();
+            this.lblTNetworkInterfaceCmb = new System.Windows.Forms.Label();
             this.cmbInterfaces = new System.Windows.Forms.ComboBox();
             this.grpDNSServer = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblTDNSServerTxt = new System.Windows.Forms.Label();
+            this.txtDNSServer = new System.Windows.Forms.TextBox();
             this.tabConsole = new System.Windows.Forms.TabPage();
             this.txtConsole = new System.Windows.Forms.RichTextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStrip1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.ssbMain = new System.Windows.Forms.StatusStrip();
+            this.tsbMain.SuspendLayout();
+            this.mnuMain.SuspendLayout();
             this.TabProfiles.SuspendLayout();
             this.tabProfile.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grpProfiles.SuspendLayout();
+            this.grpDetails.SuspendLayout();
             this.tabNew.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlIPs.SuspendLayout();
             this.grpIPAddress.SuspendLayout();
             this.grpDNSServer.SuspendLayout();
             this.tabConsole.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // tsbMain
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton5,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(324, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tsbMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbSave,
+            this.tsbNew,
+            this.tsbDelete,
+            this.tsbApply,
+            this.tsbExit});
+            this.tsbMain.Location = new System.Drawing.Point(0, 24);
+            this.tsbMain.Name = "tsbMain";
+            this.tsbMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.tsbMain.Size = new System.Drawing.Size(324, 25);
+            this.tsbMain.TabIndex = 1;
+            this.tsbMain.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbSave
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::ChangeIPAdress.Properties.Resources.disk;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Save profile";
+            this.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSave.Image = global::ChangeIPAdress.Properties.Resources.disk;
+            this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSave.Name = "tsbSave";
+            this.tsbSave.Size = new System.Drawing.Size(23, 22);
+            this.tsbSave.Text = "Save profile";
             // 
-            // toolStripButton2
+            // tsbNew
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::ChangeIPAdress.Properties.Resources.Delete;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "Delete profile";
+            this.tsbNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNew.Image = global::ChangeIPAdress.Properties.Resources._new;
+            this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNew.Name = "tsbNew";
+            this.tsbNew.Size = new System.Drawing.Size(23, 22);
+            this.tsbNew.Text = "New...";
             // 
-            // toolStripButton3
+            // tsbDelete
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::ChangeIPAdress.Properties.Resources.camera_test;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "Apply profile";
+            this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDelete.Image = global::ChangeIPAdress.Properties.Resources.Delete;
+            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelete.Name = "tsbDelete";
+            this.tsbDelete.Size = new System.Drawing.Size(23, 22);
+            this.tsbDelete.Text = "Delete profile";
             // 
-            // toolStripButton4
+            // tsbApply
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::ChangeIPAdress.Properties.Resources.exit;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "Exit";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.tsbApply.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbApply.Image = global::ChangeIPAdress.Properties.Resources.camera_test;
+            this.tsbApply.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbApply.Name = "tsbApply";
+            this.tsbApply.Size = new System.Drawing.Size(23, 22);
+            this.tsbApply.Text = "Apply profile";
             // 
-            // toolStripButton5
+            // tsbExit
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = global::ChangeIPAdress.Properties.Resources._new;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "New...";
+            this.tsbExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExit.Image = global::ChangeIPAdress.Properties.Resources.exit;
+            this.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExit.Name = "tsbExit";
+            this.tsbExit.Size = new System.Drawing.Size(23, 22);
+            this.tsbExit.Text = "Exit";
+            this.tsbExit.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // menuStrip1
+            // mnuMain
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Menu;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.profileToolStripMenuItem,
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(324, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuMain.BackColor = System.Drawing.SystemColors.Menu;
+            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmProfile,
+            this.tsmPreference,
+            this.tsmHelp});
+            this.mnuMain.Location = new System.Drawing.Point(0, 0);
+            this.mnuMain.Name = "mnuMain";
+            this.mnuMain.Size = new System.Drawing.Size(324, 24);
+            this.mnuMain.TabIndex = 2;
+            this.mnuMain.Text = "menuStrip1";
             // 
-            // profileToolStripMenuItem
+            // tsmProfile
             // 
-            this.profileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.saveToolStripMenuItem1,
-            this.deleteToolStripMenuItem,
+            this.tsmProfile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmNew,
+            this.tsmSave,
+            this.tsmDelete,
             this.toolStripMenuItem2,
-            this.exitToolStripMenuItem1});
-            this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.profileToolStripMenuItem.Text = "Profile";
+            this.tsmExit});
+            this.tsmProfile.Name = "tsmProfile";
+            this.tsmProfile.Size = new System.Drawing.Size(53, 20);
+            this.tsmProfile.Text = "Profile";
             // 
-            // newToolStripMenuItem
+            // tsmNew
             // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newToolStripMenuItem.Text = "New...";
+            this.tsmNew.Name = "tsmNew";
+            this.tsmNew.Size = new System.Drawing.Size(107, 22);
+            this.tsmNew.Text = "New...";
             // 
-            // saveToolStripMenuItem1
+            // tsmSave
             // 
-            this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.saveToolStripMenuItem1.Text = "Save";
+            this.tsmSave.Name = "tsmSave";
+            this.tsmSave.Size = new System.Drawing.Size(107, 22);
+            this.tsmSave.Text = "Save";
             // 
-            // deleteToolStripMenuItem
+            // tsmDelete
             // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.tsmDelete.Name = "tsmDelete";
+            this.tsmDelete.Size = new System.Drawing.Size(107, 22);
+            this.tsmDelete.Text = "Delete";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(104, 6);
             // 
-            // exitToolStripMenuItem1
+            // tsmExit
             // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem1.Text = "Exit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            this.tsmExit.Name = "tsmExit";
+            this.tsmExit.Size = new System.Drawing.Size(107, 22);
+            this.tsmExit.Text = "Exit";
+            this.tsmExit.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
-            // fileToolStripMenuItem
+            // tsmPreference
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.preferencesToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.fileToolStripMenuItem.Text = "Preference";
+            this.tsmPreference.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmLanguage});
+            this.tsmPreference.Name = "tsmPreference";
+            this.tsmPreference.Size = new System.Drawing.Size(75, 20);
+            this.tsmPreference.Text = "Preference";
             // 
-            // preferencesToolStripMenuItem
+            // tsmLanguage
             // 
-            this.preferencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.englishStripMenuItem,
-            this.spanishStripMenuItem});
-            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.preferencesToolStripMenuItem.Text = "Language";
+            this.tsmLanguage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmEnglish,
+            this.tsmSpanish});
+            this.tsmLanguage.Name = "tsmLanguage";
+            this.tsmLanguage.Size = new System.Drawing.Size(126, 22);
+            this.tsmLanguage.Text = "Language";
             // 
-            // englishStripMenuItem
+            // tsmEnglish
             // 
-            this.englishStripMenuItem.Name = "englishStripMenuItem";
-            this.englishStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.englishStripMenuItem.Text = "English";
-            this.englishStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.tsmEnglish.Name = "tsmEnglish";
+            this.tsmEnglish.Size = new System.Drawing.Size(115, 22);
+            this.tsmEnglish.Text = "English";
+            this.tsmEnglish.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // spanishStripMenuItem
+            // tsmSpanish
             // 
-            this.spanishStripMenuItem.CheckOnClick = true;
-            this.spanishStripMenuItem.Name = "spanishStripMenuItem";
-            this.spanishStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.spanishStripMenuItem.Text = "Spanish";
-            this.spanishStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.tsmSpanish.CheckOnClick = true;
+            this.tsmSpanish.Name = "tsmSpanish";
+            this.tsmSpanish.Size = new System.Drawing.Size(115, 22);
+            this.tsmSpanish.Text = "Spanish";
+            this.tsmSpanish.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // helpToolStripMenuItem
+            // tsmHelp
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.tsmHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAbout});
+            this.tsmHelp.Name = "tsmHelp";
+            this.tsmHelp.Size = new System.Drawing.Size(44, 20);
+            this.tsmHelp.Text = "Help";
             // 
-            // aboutToolStripMenuItem
+            // tsmAbout
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About...";
+            this.tsmAbout.Name = "tsmAbout";
+            this.tsmAbout.Size = new System.Drawing.Size(116, 22);
+            this.tsmAbout.Text = "About...";
             // 
             // TabProfiles
             // 
@@ -276,141 +276,142 @@
             // 
             // tabProfile
             // 
-            this.tabProfile.Controls.Add(this.groupBox1);
-            this.tabProfile.Controls.Add(this.groupBox3);
+            this.tabProfile.Controls.Add(this.grpProfiles);
+            this.tabProfile.Controls.Add(this.grpDetails);
             this.tabProfile.Location = new System.Drawing.Point(4, 22);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Size = new System.Drawing.Size(305, 317);
             this.tabProfile.TabIndex = 2;
             this.tabProfile.Text = "Profiles";
             this.tabProfile.UseVisualStyleBackColor = true;
+            this.tabProfile.Click += new System.EventHandler(this.tabProfile_Click);
             // 
-            // groupBox1
+            // grpProfiles
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Location = new System.Drawing.Point(5, 49);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(142, 219);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Select Profile";
+            this.grpProfiles.Controls.Add(this.lstProfiles);
+            this.grpProfiles.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpProfiles.Location = new System.Drawing.Point(5, 49);
+            this.grpProfiles.Name = "grpProfiles";
+            this.grpProfiles.Size = new System.Drawing.Size(142, 219);
+            this.grpProfiles.TabIndex = 2;
+            this.grpProfiles.TabStop = false;
+            this.grpProfiles.Text = "Select Profile";
             // 
-            // listBox1
+            // lstProfiles
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(8, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(125, 186);
-            this.listBox1.TabIndex = 1;
+            this.lstProfiles.FormattingEnabled = true;
+            this.lstProfiles.Location = new System.Drawing.Point(8, 19);
+            this.lstProfiles.Name = "lstProfiles";
+            this.lstProfiles.Size = new System.Drawing.Size(125, 186);
+            this.lstProfiles.TabIndex = 1;
             // 
-            // groupBox3
+            // grpDetails
             // 
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox3.Location = new System.Drawing.Point(153, 49);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(133, 219);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Details";
+            this.grpDetails.Controls.Add(this.lblDNSServer);
+            this.grpDetails.Controls.Add(this.lblTDNSServer);
+            this.grpDetails.Controls.Add(this.lblGateway);
+            this.grpDetails.Controls.Add(this.lblTGateway);
+            this.grpDetails.Controls.Add(this.lblIPAddress);
+            this.grpDetails.Controls.Add(this.lblNetworkInterface);
+            this.grpDetails.Controls.Add(this.lblTIPAddress);
+            this.grpDetails.Controls.Add(this.lblTNetworkInterface);
+            this.grpDetails.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpDetails.Location = new System.Drawing.Point(153, 49);
+            this.grpDetails.Name = "grpDetails";
+            this.grpDetails.Size = new System.Drawing.Size(133, 219);
+            this.grpDetails.TabIndex = 1;
+            this.grpDetails.TabStop = false;
+            this.grpDetails.Text = "Details";
             // 
-            // label13
+            // lblDNSServer
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(6, 180);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "----";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.lblDNSServer.AutoSize = true;
+            this.lblDNSServer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDNSServer.Location = new System.Drawing.Point(6, 180);
+            this.lblDNSServer.Name = "lblDNSServer";
+            this.lblDNSServer.Size = new System.Drawing.Size(19, 13);
+            this.lblDNSServer.TabIndex = 8;
+            this.lblDNSServer.Text = "----";
+            
             // 
-            // label14
+            // lblTDNSServer
             // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(6, 163);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 13);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "DNS Server";
+            this.lblTDNSServer.AutoSize = true;
+            this.lblTDNSServer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTDNSServer.Location = new System.Drawing.Point(6, 163);
+            this.lblTDNSServer.Name = "lblTDNSServer";
+            this.lblTDNSServer.Size = new System.Drawing.Size(64, 13);
+            this.lblTDNSServer.TabIndex = 7;
+            this.lblTDNSServer.Text = "DNS Server";
             // 
-            // label11
+            // lblGateway
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(6, 133);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(19, 13);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "----";
+            this.lblGateway.AutoSize = true;
+            this.lblGateway.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblGateway.Location = new System.Drawing.Point(6, 133);
+            this.lblGateway.Name = "lblGateway";
+            this.lblGateway.Size = new System.Drawing.Size(19, 13);
+            this.lblGateway.TabIndex = 6;
+            this.lblGateway.Text = "----";
             // 
-            // label12
+            // lblTGateway
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(6, 116);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 13);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Gateway";
+            this.lblTGateway.AutoSize = true;
+            this.lblTGateway.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTGateway.Location = new System.Drawing.Point(6, 116);
+            this.lblTGateway.Name = "lblTGateway";
+            this.lblTGateway.Size = new System.Drawing.Size(49, 13);
+            this.lblTGateway.TabIndex = 5;
+            this.lblTGateway.Text = "Gateway";
             // 
-            // label10
+            // lblIPAddress
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(6, 88);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(19, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "----";
+            this.lblIPAddress.AutoSize = true;
+            this.lblIPAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIPAddress.Location = new System.Drawing.Point(6, 88);
+            this.lblIPAddress.Name = "lblIPAddress";
+            this.lblIPAddress.Size = new System.Drawing.Size(19, 13);
+            this.lblIPAddress.TabIndex = 4;
+            this.lblIPAddress.Text = "----";
             // 
-            // label9
+            // lblNetworkInterface
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(6, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(19, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "----";
+            this.lblNetworkInterface.AutoSize = true;
+            this.lblNetworkInterface.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNetworkInterface.Location = new System.Drawing.Point(6, 48);
+            this.lblNetworkInterface.Name = "lblNetworkInterface";
+            this.lblNetworkInterface.Size = new System.Drawing.Size(19, 13);
+            this.lblNetworkInterface.TabIndex = 3;
+            this.lblNetworkInterface.Text = "----";
             // 
-            // label8
+            // lblTIPAddress
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(6, 71);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "IP Address";
+            this.lblTIPAddress.AutoSize = true;
+            this.lblTIPAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTIPAddress.Location = new System.Drawing.Point(6, 71);
+            this.lblTIPAddress.Name = "lblTIPAddress";
+            this.lblTIPAddress.Size = new System.Drawing.Size(58, 13);
+            this.lblTIPAddress.TabIndex = 2;
+            this.lblTIPAddress.Text = "IP Address";
             // 
-            // label7
+            // lblTNetworkInterface
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(5, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Network Interface";
+            this.lblTNetworkInterface.AutoSize = true;
+            this.lblTNetworkInterface.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTNetworkInterface.Location = new System.Drawing.Point(5, 31);
+            this.lblTNetworkInterface.Name = "lblTNetworkInterface";
+            this.lblTNetworkInterface.Size = new System.Drawing.Size(92, 13);
+            this.lblTNetworkInterface.TabIndex = 0;
+            this.lblTNetworkInterface.Text = "Network Interface";
             // 
             // tabNew
             // 
             this.tabNew.Controls.Add(this.rdbSpecifyDNS);
-            this.tabNew.Controls.Add(this.panel1);
+            this.tabNew.Controls.Add(this.pnlIPs);
             this.tabNew.Controls.Add(this.txtProfile);
-            this.tabNew.Controls.Add(this.label6);
-            this.tabNew.Controls.Add(this.rdbAutomaticDNS);
-            this.tabNew.Controls.Add(this.label1);
+            this.tabNew.Controls.Add(this.lblTProfile);
+            this.tabNew.Controls.Add(this.rdbDNSAutomatically);
+            this.tabNew.Controls.Add(this.lblTNetworkInterfaceCmb);
             this.tabNew.Controls.Add(this.cmbInterfaces);
             this.tabNew.Controls.Add(this.grpDNSServer);
             this.tabNew.Location = new System.Drawing.Point(4, 22);
@@ -434,15 +435,15 @@
             this.rdbSpecifyDNS.UseVisualStyleBackColor = false;
             this.rdbSpecifyDNS.CheckedChanged += new System.EventHandler(this.rdbSpecifyDNS_CheckedChanged);
             // 
-            // panel1
+            // pnlIPs
             // 
-            this.panel1.Controls.Add(this.rdbSpecifyIp);
-            this.panel1.Controls.Add(this.rdbAutomaticIp);
-            this.panel1.Controls.Add(this.grpIPAddress);
-            this.panel1.Location = new System.Drawing.Point(33, 81);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 150);
-            this.panel1.TabIndex = 7;
+            this.pnlIPs.Controls.Add(this.rdbSpecifyIp);
+            this.pnlIPs.Controls.Add(this.rdbIpAutomatically);
+            this.pnlIPs.Controls.Add(this.grpIPAddress);
+            this.pnlIPs.Location = new System.Drawing.Point(33, 81);
+            this.pnlIPs.Name = "pnlIPs";
+            this.pnlIPs.Size = new System.Drawing.Size(239, 150);
+            this.pnlIPs.TabIndex = 7;
             // 
             // rdbSpecifyIp
             // 
@@ -458,26 +459,26 @@
             this.rdbSpecifyIp.UseVisualStyleBackColor = false;
             this.rdbSpecifyIp.CheckedChanged += new System.EventHandler(this.rdbSpecifyIp_CheckedChanged);
             // 
-            // rdbAutomaticIp
+            // rdbIpAutomatically
             // 
-            this.rdbAutomaticIp.AutoSize = true;
-            this.rdbAutomaticIp.Checked = true;
-            this.rdbAutomaticIp.Location = new System.Drawing.Point(12, 8);
-            this.rdbAutomaticIp.Name = "rdbAutomaticIp";
-            this.rdbAutomaticIp.Size = new System.Drawing.Size(174, 17);
-            this.rdbAutomaticIp.TabIndex = 0;
-            this.rdbAutomaticIp.TabStop = true;
-            this.rdbAutomaticIp.Text = "Obtain IP Address automatically";
-            this.rdbAutomaticIp.UseVisualStyleBackColor = true;
+            this.rdbIpAutomatically.AutoSize = true;
+            this.rdbIpAutomatically.Checked = true;
+            this.rdbIpAutomatically.Location = new System.Drawing.Point(12, 8);
+            this.rdbIpAutomatically.Name = "rdbIpAutomatically";
+            this.rdbIpAutomatically.Size = new System.Drawing.Size(174, 17);
+            this.rdbIpAutomatically.TabIndex = 0;
+            this.rdbIpAutomatically.TabStop = true;
+            this.rdbIpAutomatically.Text = "Obtain IP Address automatically";
+            this.rdbIpAutomatically.UseVisualStyleBackColor = true;
             // 
             // grpIPAddress
             // 
-            this.grpIPAddress.Controls.Add(this.textBox3);
-            this.grpIPAddress.Controls.Add(this.label4);
-            this.grpIPAddress.Controls.Add(this.textBox1);
-            this.grpIPAddress.Controls.Add(this.label3);
-            this.grpIPAddress.Controls.Add(this.textBox2);
-            this.grpIPAddress.Controls.Add(this.label2);
+            this.grpIPAddress.Controls.Add(this.txtGateway);
+            this.grpIPAddress.Controls.Add(this.lblGatewayTxt);
+            this.grpIPAddress.Controls.Add(this.txtIPAddress);
+            this.grpIPAddress.Controls.Add(this.lblIPSubnetTxt);
+            this.grpIPAddress.Controls.Add(this.txtIPSubnet);
+            this.grpIPAddress.Controls.Add(this.lblIPAddressTxt);
             this.grpIPAddress.Enabled = false;
             this.grpIPAddress.Location = new System.Drawing.Point(6, 28);
             this.grpIPAddress.Name = "grpIPAddress";
@@ -485,53 +486,53 @@
             this.grpIPAddress.TabIndex = 20;
             this.grpIPAddress.TabStop = false;
             // 
-            // textBox3
+            // txtGateway
             // 
-            this.textBox3.Location = new System.Drawing.Point(75, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtGateway.Location = new System.Drawing.Point(75, 85);
+            this.txtGateway.Name = "txtGateway";
+            this.txtGateway.Size = new System.Drawing.Size(139, 20);
+            this.txtGateway.TabIndex = 2;
             // 
-            // label4
+            // lblGatewayTxt
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Gateway";
+            this.lblGatewayTxt.AutoSize = true;
+            this.lblGatewayTxt.Location = new System.Drawing.Point(20, 87);
+            this.lblGatewayTxt.Name = "lblGatewayTxt";
+            this.lblGatewayTxt.Size = new System.Drawing.Size(49, 13);
+            this.lblGatewayTxt.TabIndex = 19;
+            this.lblGatewayTxt.Text = "Gateway";
             // 
-            // textBox1
+            // txtIPAddress
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtIPAddress.Location = new System.Drawing.Point(75, 25);
+            this.txtIPAddress.Name = "txtIPAddress";
+            this.txtIPAddress.Size = new System.Drawing.Size(139, 20);
+            this.txtIPAddress.TabIndex = 0;
             // 
-            // label3
+            // lblIPSubnetTxt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "IP Subnet";
+            this.lblIPSubnetTxt.AutoSize = true;
+            this.lblIPSubnetTxt.Location = new System.Drawing.Point(15, 58);
+            this.lblIPSubnetTxt.Name = "lblIPSubnetTxt";
+            this.lblIPSubnetTxt.Size = new System.Drawing.Size(54, 13);
+            this.lblIPSubnetTxt.TabIndex = 18;
+            this.lblIPSubnetTxt.Text = "IP Subnet";
             // 
-            // textBox2
+            // txtIPSubnet
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtIPSubnet.Location = new System.Drawing.Point(75, 55);
+            this.txtIPSubnet.Name = "txtIPSubnet";
+            this.txtIPSubnet.Size = new System.Drawing.Size(139, 20);
+            this.txtIPSubnet.TabIndex = 1;
             // 
-            // label2
+            // lblIPAddressTxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "IP Address";
+            this.lblIPAddressTxt.AutoSize = true;
+            this.lblIPAddressTxt.Location = new System.Drawing.Point(11, 28);
+            this.lblIPAddressTxt.Name = "lblIPAddressTxt";
+            this.lblIPAddressTxt.Size = new System.Drawing.Size(58, 13);
+            this.lblIPAddressTxt.TabIndex = 1;
+            this.lblIPAddressTxt.Text = "IP Address";
             // 
             // txtProfile
             // 
@@ -541,36 +542,36 @@
             this.txtProfile.TabIndex = 4;
             this.txtProfile.Text = "New Profile...";
             // 
-            // label6
+            // lblTProfile
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Profile Name";
+            this.lblTProfile.AutoSize = true;
+            this.lblTProfile.Location = new System.Drawing.Point(40, 15);
+            this.lblTProfile.Name = "lblTProfile";
+            this.lblTProfile.Size = new System.Drawing.Size(67, 13);
+            this.lblTProfile.TabIndex = 3;
+            this.lblTProfile.Text = "Profile Name";
             // 
-            // rdbAutomaticDNS
+            // rdbDNSAutomatically
             // 
-            this.rdbAutomaticDNS.AutoSize = true;
-            this.rdbAutomaticDNS.Checked = true;
-            this.rdbAutomaticDNS.Location = new System.Drawing.Point(46, 235);
-            this.rdbAutomaticDNS.Name = "rdbAutomaticDNS";
-            this.rdbAutomaticDNS.Size = new System.Drawing.Size(221, 17);
-            this.rdbAutomaticDNS.TabIndex = 0;
-            this.rdbAutomaticDNS.TabStop = true;
-            this.rdbAutomaticDNS.Text = "Obtain DNS Server Address automatically";
-            this.rdbAutomaticDNS.UseVisualStyleBackColor = true;
+            this.rdbDNSAutomatically.AutoSize = true;
+            this.rdbDNSAutomatically.Checked = true;
+            this.rdbDNSAutomatically.Location = new System.Drawing.Point(46, 235);
+            this.rdbDNSAutomatically.Name = "rdbDNSAutomatically";
+            this.rdbDNSAutomatically.Size = new System.Drawing.Size(221, 17);
+            this.rdbDNSAutomatically.TabIndex = 0;
+            this.rdbDNSAutomatically.TabStop = true;
+            this.rdbDNSAutomatically.Text = "Obtain DNS Server Address automatically";
+            this.rdbDNSAutomatically.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblTNetworkInterfaceCmb
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Network Interface";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblTNetworkInterfaceCmb.AutoSize = true;
+            this.lblTNetworkInterfaceCmb.Location = new System.Drawing.Point(110, 40);
+            this.lblTNetworkInterfaceCmb.Name = "lblTNetworkInterfaceCmb";
+            this.lblTNetworkInterfaceCmb.Size = new System.Drawing.Size(92, 13);
+            this.lblTNetworkInterfaceCmb.TabIndex = 5;
+            this.lblTNetworkInterfaceCmb.Text = "Network Interface";
+            
             // 
             // cmbInterfaces
             // 
@@ -585,8 +586,8 @@
             // 
             // grpDNSServer
             // 
-            this.grpDNSServer.Controls.Add(this.label5);
-            this.grpDNSServer.Controls.Add(this.textBox4);
+            this.grpDNSServer.Controls.Add(this.lblTDNSServerTxt);
+            this.grpDNSServer.Controls.Add(this.txtDNSServer);
             this.grpDNSServer.Enabled = false;
             this.grpDNSServer.Location = new System.Drawing.Point(38, 259);
             this.grpDNSServer.Name = "grpDNSServer";
@@ -594,21 +595,21 @@
             this.grpDNSServer.TabIndex = 3;
             this.grpDNSServer.TabStop = false;
             // 
-            // label5
+            // lblTDNSServerTxt
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "DNS Server";
+            this.lblTDNSServerTxt.AutoSize = true;
+            this.lblTDNSServerTxt.Location = new System.Drawing.Point(5, 26);
+            this.lblTDNSServerTxt.Name = "lblTDNSServerTxt";
+            this.lblTDNSServerTxt.Size = new System.Drawing.Size(64, 13);
+            this.lblTDNSServerTxt.TabIndex = 14;
+            this.lblTDNSServerTxt.Text = "DNS Server";
             // 
-            // textBox4
+            // txtDNSServer
             // 
-            this.textBox4.Location = new System.Drawing.Point(75, 22);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 20);
-            this.textBox4.TabIndex = 1;
+            this.txtDNSServer.Location = new System.Drawing.Point(75, 22);
+            this.txtDNSServer.Name = "txtDNSServer";
+            this.txtDNSServer.Size = new System.Drawing.Size(139, 20);
+            this.txtDNSServer.TabIndex = 1;
             // 
             // tabConsole
             // 
@@ -631,13 +632,13 @@
             this.txtConsole.TabIndex = 0;
             this.txtConsole.Text = "";
             // 
-            // statusStrip1
+            // ssbMain
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 398);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(324, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
+            this.ssbMain.Location = new System.Drawing.Point(0, 398);
+            this.ssbMain.Name = "ssbMain";
+            this.ssbMain.Size = new System.Drawing.Size(324, 22);
+            this.ssbMain.TabIndex = 4;
+            this.ssbMain.Text = "statusStrip1";
             // 
             // FrmMain
             // 
@@ -645,32 +646,32 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(324, 420);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.ssbMain);
             this.Controls.Add(this.TabProfiles);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tsbMain);
+            this.Controls.Add(this.mnuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mnuMain;
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change IP Address";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.tsbMain.ResumeLayout(false);
+            this.tsbMain.PerformLayout();
+            this.mnuMain.ResumeLayout(false);
+            this.mnuMain.PerformLayout();
             this.TabProfiles.ResumeLayout(false);
             this.tabProfile.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grpProfiles.ResumeLayout(false);
+            this.grpDetails.ResumeLayout(false);
+            this.grpDetails.PerformLayout();
             this.tabNew.ResumeLayout(false);
             this.tabNew.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlIPs.ResumeLayout(false);
+            this.pnlIPs.PerformLayout();
             this.grpIPAddress.ResumeLayout(false);
             this.grpIPAddress.PerformLayout();
             this.grpDNSServer.ResumeLayout(false);
@@ -683,60 +684,60 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStrip tsbMain;
+        private System.Windows.Forms.MenuStrip mnuMain;
+        private System.Windows.Forms.ToolStripMenuItem tsmPreference;
+        private System.Windows.Forms.ToolStripButton tsbSave;
+        private System.Windows.Forms.ToolStripButton tsbDelete;
+        private System.Windows.Forms.ToolStripMenuItem tsmProfile;
+        private System.Windows.Forms.ToolStripMenuItem tsmNew;
+        private System.Windows.Forms.ToolStripMenuItem tsmDelete;
+        private System.Windows.Forms.ToolStripMenuItem tsmHelp;
+        private System.Windows.Forms.ToolStripMenuItem tsmAbout;
+        private System.Windows.Forms.ToolStripButton tsbApply;
         private System.Windows.Forms.TabControl TabProfiles;
         private System.Windows.Forms.TabPage tabNew;
         private System.Windows.Forms.TabPage tabConsole;
         private System.Windows.Forms.TabPage tabProfile;
         private System.Windows.Forms.RichTextBox txtConsole;
         private System.Windows.Forms.GroupBox grpDNSServer;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDNSServer;
+        private System.Windows.Forms.Label lblTNetworkInterfaceCmb;
         private System.Windows.Forms.ComboBox cmbInterfaces;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton rdbAutomaticDNS;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.Label lblTDNSServerTxt;
+        private System.Windows.Forms.RadioButton rdbDNSAutomatically;
+        private System.Windows.Forms.StatusStrip ssbMain;
         private System.Windows.Forms.TextBox txtProfile;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTProfile;
+        private System.Windows.Forms.GroupBox grpDetails;
+        private System.Windows.Forms.Label lblTIPAddress;
+        private System.Windows.Forms.Label lblTNetworkInterface;
+        private System.Windows.Forms.Panel pnlIPs;
         private System.Windows.Forms.RadioButton rdbSpecifyIp;
-        private System.Windows.Forms.RadioButton rdbAutomaticIp;
+        private System.Windows.Forms.RadioButton rdbIpAutomatically;
         private System.Windows.Forms.GroupBox grpIPAddress;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtGateway;
+        private System.Windows.Forms.Label lblGatewayTxt;
+        private System.Windows.Forms.TextBox txtIPAddress;
+        private System.Windows.Forms.Label lblIPSubnetTxt;
+        private System.Windows.Forms.TextBox txtIPSubnet;
+        private System.Windows.Forms.Label lblIPAddressTxt;
         private System.Windows.Forms.RadioButton rdbSpecifyDNS;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lblDNSServer;
+        private System.Windows.Forms.Label lblTDNSServer;
+        private System.Windows.Forms.Label lblGateway;
+        private System.Windows.Forms.Label lblTGateway;
+        private System.Windows.Forms.Label lblIPAddress;
+        private System.Windows.Forms.Label lblNetworkInterface;
+        private System.Windows.Forms.ToolStripMenuItem tsmSave;
+        private System.Windows.Forms.ToolStripButton tsbExit;
+        private System.Windows.Forms.GroupBox grpProfiles;
+        private System.Windows.Forms.ListBox lstProfiles;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem englishStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem spanishStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripMenuItem tsmExit;
+        private System.Windows.Forms.ToolStripMenuItem tsmLanguage;
+        private System.Windows.Forms.ToolStripMenuItem tsmEnglish;
+        private System.Windows.Forms.ToolStripMenuItem tsmSpanish;
+        private System.Windows.Forms.ToolStripButton tsbNew;
     }
 }

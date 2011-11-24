@@ -117,7 +117,118 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="strMessage" xml:space="preserve">
+  <data name="FrmMainTxt" xml:space="preserve">
     <value>Cambiar dirección IP</value>
+  </data>
+  <data name="grpDetailsTxt" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="grpProfiles" xml:space="preserve">
+    <value>Select Profile</value>
+  </data>
+  <data name="lblGatewayTxt" xml:space="preserve">
+    <value>Gateway</value>
+  </data>
+  <data name="lblIPAddressTxt" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="lblIPSubnetTxt" xml:space="preserve">
+    <value>IP Subnet</value>
+  </data>
+  <data name="lblSeparatorTxt" xml:space="preserve">
+    <value>----</value>
+  </data>
+  <data name="lblTDNSServerTxt" xml:space="preserve">
+    <value>DNS Server</value>
+  </data>
+  <data name="lblTGatewayTxt" xml:space="preserve">
+    <value>Gateway</value>
+  </data>
+  <data name="lblTIPAddressTxt" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="lblTNetworkInterfaceCmbTxt" xml:space="preserve">
+    <value>Network Interface</value>
+  </data>
+  <data name="lblTNetworkInterfaceTxt" xml:space="preserve">
+    <value>Network Interface</value>
+  </data>
+  <data name="lblTProfileTxt" xml:space="preserve">
+    <value>Profile Name</value>
+  </data>
+  <data name="rdbDNSAutomaticallyTxt" xml:space="preserve">
+    <value>Obtain DNS Server Address automatically</value>
+  </data>
+  <data name="rdbIpAutomaticallyTxt" xml:space="preserve">
+    <value>Obtain IP Address automatically</value>
+  </data>
+  <data name="rdbSpecifyDNSTxt" xml:space="preserve">
+    <value>Use the following DNS Server address</value>
+  </data>
+  <data name="rdbSpecifyIpTxt" xml:space="preserve">
+    <value>Specify an IP address</value>
+  </data>
+  <data name="strMessage" xml:space="preserve">
+    <value>Change IP Address</value>
+  </data>
+  <data name="tabConsoleTxt" xml:space="preserve">
+    <value>Console</value>
+  </data>
+  <data name="tabNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="tabProfileTxt" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="tsbApplyTxt" xml:space="preserve">
+    <value>Apply profile</value>
+  </data>
+  <data name="tsbDeleteTxt" xml:space="preserve">
+    <value>Delete profile</value>
+  </data>
+  <data name="tsbExitTxt" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="tsbNewTxt" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <data name="tsbSaveTxt" xml:space="preserve">
+    <value>Save profile</value>
+  </data>
+  <data name="tsmAboutTxt" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="tsmDeleteTxt" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="tsmEnglishTxt" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="tsmExitTxt" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="tsmHelpTxt" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="tsmLanguageTxt" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="tsmNewTxt" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <data name="tsmPreferenceTxt" xml:space="preserve">
+    <value>Preference</value>
+  </data>
+  <data name="tsmProfileTxt" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="tsmSaveTxt" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="tsmSpanishTxt" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="txtProfileTxt" xml:space="preserve">
+    <value>New Profile...</value>
   </data>
 </root>
