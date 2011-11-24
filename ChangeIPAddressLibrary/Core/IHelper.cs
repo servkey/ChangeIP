@@ -5,7 +5,11 @@ using System.Text;
 
 namespace ChangeIPAddressLibrary.Core
 {
-    interface IHelper
+    public interface IHelper<E>
     {
+        void Add(E e);
+        void Delete(E e);
+        E GetProfile(E e);
+        List<E> GetAll();
     }
 }

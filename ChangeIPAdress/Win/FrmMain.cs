@@ -28,6 +28,9 @@ namespace ChangeIPAdress.Win
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            ChangeIPAddressLibrary.Core.DBLiteConnection c = new ChangeIPAddressLibrary.Core.DBLiteConnection();
+            int r = c.ExecuteNonQuery("select * from TblProfiles;");
+
             
             cmbInterfaces.DataSource = ChangeIPAddressLibrary.Core.IPSetting.GetAllNetworkInterfaces();
             cmbInterfaces.DisplayMember = "Description";

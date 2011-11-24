@@ -144,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="desktopshare.ico" />
+    <None Include="Resources\1322026544_Stop.png" />
+    <None Include="Resources\1322026413_stop.png" />
+    <None Include="Resources\1322026248_Stop.png" />
     <None Include="Resources\new.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

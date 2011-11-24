@@ -74,13 +74,6 @@ namespace ChangeIPAdress.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap _new {
-            get {
-                object obj = ResourceManager.GetObject("new", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap add2 {
             get {
                 object obj = ResourceManager.GetObject("add2", resourceCulture);
@@ -130,9 +123,23 @@ namespace ChangeIPAdress.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap New {
+            get {
+                object obj = ResourceManager.GetObject("New", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap plus_64 {
             get {
                 object obj = ResourceManager.GetObject("plus_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Stop {
+            get {
+                object obj = ResourceManager.GetObject("Stop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
