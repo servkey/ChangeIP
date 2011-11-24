@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tsbMain = new System.Windows.Forms.ToolStrip();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
             this.tsbNew = new System.Windows.Forms.ToolStripButton();
@@ -44,8 +43,8 @@
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPreference = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLanguage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmEnglish = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmSpanish = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmLEnglish = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmLSpanish = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.TabProfiles = new System.Windows.Forms.TabControl();
@@ -124,7 +123,7 @@
             // tsbNew
             // 
             this.tsbNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbNew.Image = global::ChangeIPAdress.Properties.Resources._new;
+            this.tsbNew.Image = global::ChangeIPAdress.Properties.Resources.New;
             this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNew.Name = "tsbNew";
             this.tsbNew.Size = new System.Drawing.Size(23, 22);
@@ -156,7 +155,7 @@
             this.tsbExit.Name = "tsbExit";
             this.tsbExit.Size = new System.Drawing.Size(23, 22);
             this.tsbExit.Text = "Exit";
-            this.tsbExit.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.tsbExit.Click += new System.EventHandler(this.tsbExit_Click);
             // 
             // mnuMain
             // 
@@ -170,6 +169,7 @@
             this.mnuMain.Size = new System.Drawing.Size(324, 24);
             this.mnuMain.TabIndex = 2;
             this.mnuMain.Text = "menuStrip1";
+            this.mnuMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuMain_ItemClicked);
             // 
             // tsmProfile
             // 
@@ -211,7 +211,7 @@
             this.tsmExit.Name = "tsmExit";
             this.tsmExit.Size = new System.Drawing.Size(107, 22);
             this.tsmExit.Text = "Exit";
-            this.tsmExit.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
             // tsmPreference
             // 
@@ -224,26 +224,26 @@
             // tsmLanguage
             // 
             this.tsmLanguage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmEnglish,
-            this.tsmSpanish});
+            this.tsmLEnglish,
+            this.tsmLSpanish});
             this.tsmLanguage.Name = "tsmLanguage";
-            this.tsmLanguage.Size = new System.Drawing.Size(126, 22);
+            this.tsmLanguage.Size = new System.Drawing.Size(152, 22);
             this.tsmLanguage.Text = "Language";
             // 
-            // tsmEnglish
+            // tsmLEnglish
             // 
-            this.tsmEnglish.Name = "tsmEnglish";
-            this.tsmEnglish.Size = new System.Drawing.Size(115, 22);
-            this.tsmEnglish.Text = "English";
-            this.tsmEnglish.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.tsmLEnglish.Name = "tsmLEnglish";
+            this.tsmLEnglish.Size = new System.Drawing.Size(152, 22);
+            this.tsmLEnglish.Text = "English";
+            this.tsmLEnglish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
-            // tsmSpanish
+            // tsmLSpanish
             // 
-            this.tsmSpanish.CheckOnClick = true;
-            this.tsmSpanish.Name = "tsmSpanish";
-            this.tsmSpanish.Size = new System.Drawing.Size(115, 22);
-            this.tsmSpanish.Text = "Spanish";
-            this.tsmSpanish.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.tsmLSpanish.CheckOnClick = true;
+            this.tsmLSpanish.Name = "tsmLSpanish";
+            this.tsmLSpanish.Size = new System.Drawing.Size(152, 22);
+            this.tsmLSpanish.Text = "Spanish";
+            this.tsmLSpanish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
             // tsmHelp
             // 
@@ -271,8 +271,6 @@
             this.TabProfiles.Size = new System.Drawing.Size(313, 343);
             this.TabProfiles.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.TabProfiles.TabIndex = 3;
-            this.TabProfiles.SelectedIndexChanged += new System.EventHandler(this.TabProfiles_SelectedIndexChanged);
-            this.TabProfiles.TabIndexChanged += new System.EventHandler(this.TabProfiles_TabIndexChanged);
             // 
             // tabProfile
             // 
@@ -284,7 +282,6 @@
             this.tabProfile.TabIndex = 2;
             this.tabProfile.Text = "Profiles";
             this.tabProfile.UseVisualStyleBackColor = true;
-            this.tabProfile.Click += new System.EventHandler(this.tabProfile_Click);
             // 
             // grpProfiles
             // 
@@ -332,7 +329,6 @@
             this.lblDNSServer.Size = new System.Drawing.Size(19, 13);
             this.lblDNSServer.TabIndex = 8;
             this.lblDNSServer.Text = "----";
-            
             // 
             // lblTDNSServer
             // 
@@ -433,7 +429,6 @@
             this.rdbSpecifyDNS.TabStop = true;
             this.rdbSpecifyDNS.Text = "Use the following DNS Server address";
             this.rdbSpecifyDNS.UseVisualStyleBackColor = false;
-            this.rdbSpecifyDNS.CheckedChanged += new System.EventHandler(this.rdbSpecifyDNS_CheckedChanged);
             // 
             // pnlIPs
             // 
@@ -457,7 +452,6 @@
             this.rdbSpecifyIp.Text = "Specify an IP address";
             this.rdbSpecifyIp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbSpecifyIp.UseVisualStyleBackColor = false;
-            this.rdbSpecifyIp.CheckedChanged += new System.EventHandler(this.rdbSpecifyIp_CheckedChanged);
             // 
             // rdbIpAutomatically
             // 
@@ -570,8 +564,7 @@
             this.lblTNetworkInterfaceCmb.Name = "lblTNetworkInterfaceCmb";
             this.lblTNetworkInterfaceCmb.Size = new System.Drawing.Size(92, 13);
             this.lblTNetworkInterfaceCmb.TabIndex = 5;
-            this.lblTNetworkInterfaceCmb.Text = "Network Interface"; 
-            
+            this.lblTNetworkInterfaceCmb.Text = "Network Interface";
             // 
             // cmbInterfaces
             // 
@@ -651,7 +644,6 @@
             this.Controls.Add(this.tsbMain);
             this.Controls.Add(this.mnuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuMain;
             this.MaximizeBox = false;
             this.Name = "FrmMain";
@@ -736,8 +728,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem tsmExit;
         private System.Windows.Forms.ToolStripMenuItem tsmLanguage;
-        private System.Windows.Forms.ToolStripMenuItem tsmEnglish;
-        private System.Windows.Forms.ToolStripMenuItem tsmSpanish;
+        private System.Windows.Forms.ToolStripMenuItem tsmLEnglish;
+        private System.Windows.Forms.ToolStripMenuItem tsmLSpanish;
         private System.Windows.Forms.ToolStripButton tsbNew;
     }
 }
