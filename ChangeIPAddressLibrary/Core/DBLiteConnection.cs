@@ -11,9 +11,9 @@ namespace ChangeIPAddressLibrary.Core
         private string strConnection;
 
         //@"Data Source=.\Setting\settings.s3db";
-        public DBLiteConnection(string strConnection)
+        public DBLiteConnection()
         {
-            this.strConnection = strConnection;
+            this.strConnection = Properties.Settings.Default.ConnectionDB;
         }
 
         public int ExecuteNonQuery(string sql)

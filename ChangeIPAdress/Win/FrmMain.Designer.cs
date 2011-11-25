@@ -107,7 +107,7 @@
             this.tsbMain.Location = new System.Drawing.Point(0, 24);
             this.tsbMain.Name = "tsbMain";
             this.tsbMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.tsbMain.Size = new System.Drawing.Size(324, 25);
+            this.tsbMain.Size = new System.Drawing.Size(331, 25);
             this.tsbMain.TabIndex = 1;
             this.tsbMain.Text = "toolStrip1";
             // 
@@ -166,7 +166,7 @@
             this.tsmHelp});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(324, 24);
+            this.mnuMain.Size = new System.Drawing.Size(331, 24);
             this.mnuMain.TabIndex = 2;
             this.mnuMain.Text = "menuStrip1";
             this.mnuMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuMain_ItemClicked);
@@ -211,7 +211,7 @@
             this.tsmExit.Name = "tsmExit";
             this.tsmExit.Size = new System.Drawing.Size(107, 22);
             this.tsmExit.Text = "Exit";
-            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
+            this.tsmExit.Click += new System.EventHandler(this.tsbExit_Click);
             // 
             // tsmPreference
             // 
@@ -227,13 +227,13 @@
             this.tsmLEnglish,
             this.tsmLSpanish});
             this.tsmLanguage.Name = "tsmLanguage";
-            this.tsmLanguage.Size = new System.Drawing.Size(152, 22);
+            this.tsmLanguage.Size = new System.Drawing.Size(126, 22);
             this.tsmLanguage.Text = "Language";
             // 
             // tsmLEnglish
             // 
             this.tsmLEnglish.Name = "tsmLEnglish";
-            this.tsmLEnglish.Size = new System.Drawing.Size(152, 22);
+            this.tsmLEnglish.Size = new System.Drawing.Size(115, 22);
             this.tsmLEnglish.Text = "English";
             this.tsmLEnglish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
@@ -241,7 +241,7 @@
             // 
             this.tsmLSpanish.CheckOnClick = true;
             this.tsmLSpanish.Name = "tsmLSpanish";
-            this.tsmLSpanish.Size = new System.Drawing.Size(152, 22);
+            this.tsmLSpanish.Size = new System.Drawing.Size(115, 22);
             this.tsmLSpanish.Text = "Spanish";
             this.tsmLSpanish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
@@ -268,9 +268,10 @@
             this.TabProfiles.Location = new System.Drawing.Point(5, 52);
             this.TabProfiles.Name = "TabProfiles";
             this.TabProfiles.SelectedIndex = 0;
-            this.TabProfiles.Size = new System.Drawing.Size(313, 343);
+            this.TabProfiles.Size = new System.Drawing.Size(320, 343);
             this.TabProfiles.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.TabProfiles.TabIndex = 3;
+            this.TabProfiles.SelectedIndexChanged += new System.EventHandler(this.TabProfiles_SelectedIndexChanged);
             // 
             // tabProfile
             // 
@@ -278,7 +279,7 @@
             this.tabProfile.Controls.Add(this.grpDetails);
             this.tabProfile.Location = new System.Drawing.Point(4, 22);
             this.tabProfile.Name = "tabProfile";
-            this.tabProfile.Size = new System.Drawing.Size(305, 317);
+            this.tabProfile.Size = new System.Drawing.Size(312, 317);
             this.tabProfile.TabIndex = 2;
             this.tabProfile.Text = "Profiles";
             this.tabProfile.UseVisualStyleBackColor = true;
@@ -301,6 +302,8 @@
             this.lstProfiles.Name = "lstProfiles";
             this.lstProfiles.Size = new System.Drawing.Size(125, 186);
             this.lstProfiles.TabIndex = 1;
+            this.lstProfiles.Click += new System.EventHandler(this.lstProfiles_Click);
+            this.lstProfiles.SelectedIndexChanged += new System.EventHandler(this.lstProfiles_Click);
             // 
             // grpDetails
             // 
@@ -315,7 +318,7 @@
             this.grpDetails.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.grpDetails.Location = new System.Drawing.Point(153, 49);
             this.grpDetails.Name = "grpDetails";
-            this.grpDetails.Size = new System.Drawing.Size(133, 219);
+            this.grpDetails.Size = new System.Drawing.Size(146, 219);
             this.grpDetails.TabIndex = 1;
             this.grpDetails.TabStop = false;
             this.grpDetails.Text = "Details";
@@ -429,6 +432,7 @@
             this.rdbSpecifyDNS.TabStop = true;
             this.rdbSpecifyDNS.Text = "Use the following DNS Server address";
             this.rdbSpecifyDNS.UseVisualStyleBackColor = false;
+            this.rdbSpecifyDNS.CheckedChanged += new System.EventHandler(this.rdbSpecifyDNS_CheckedChanged);
             // 
             // pnlIPs
             // 
@@ -444,7 +448,7 @@
             // 
             this.rdbSpecifyIp.AutoSize = true;
             this.rdbSpecifyIp.BackColor = System.Drawing.Color.White;
-            this.rdbSpecifyIp.Location = new System.Drawing.Point(12, 28);
+            this.rdbSpecifyIp.Location = new System.Drawing.Point(12, 26);
             this.rdbSpecifyIp.Name = "rdbSpecifyIp";
             this.rdbSpecifyIp.Size = new System.Drawing.Size(128, 17);
             this.rdbSpecifyIp.TabIndex = 1;
@@ -452,6 +456,7 @@
             this.rdbSpecifyIp.Text = "Specify an IP address";
             this.rdbSpecifyIp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbSpecifyIp.UseVisualStyleBackColor = false;
+            this.rdbSpecifyIp.CheckedChanged += new System.EventHandler(this.rdbSpecifyIp_CheckedChanged);
             // 
             // rdbIpAutomatically
             // 
@@ -533,7 +538,7 @@
             this.txtProfile.Location = new System.Drawing.Point(108, 12);
             this.txtProfile.Name = "txtProfile";
             this.txtProfile.Size = new System.Drawing.Size(159, 20);
-            this.txtProfile.TabIndex = 4;
+            this.txtProfile.TabIndex = 3;
             this.txtProfile.Text = "New Profile...";
             // 
             // lblTProfile
@@ -563,7 +568,7 @@
             this.lblTNetworkInterfaceCmb.Location = new System.Drawing.Point(110, 40);
             this.lblTNetworkInterfaceCmb.Name = "lblTNetworkInterfaceCmb";
             this.lblTNetworkInterfaceCmb.Size = new System.Drawing.Size(92, 13);
-            this.lblTNetworkInterfaceCmb.TabIndex = 5;
+            this.lblTNetworkInterfaceCmb.TabIndex = 4;
             this.lblTNetworkInterfaceCmb.Text = "Network Interface";
             // 
             // cmbInterfaces
@@ -575,7 +580,7 @@
             this.cmbInterfaces.Location = new System.Drawing.Point(39, 56);
             this.cmbInterfaces.Name = "cmbInterfaces";
             this.cmbInterfaces.Size = new System.Drawing.Size(227, 21);
-            this.cmbInterfaces.TabIndex = 6;
+            this.cmbInterfaces.TabIndex = 5;
             // 
             // grpDNSServer
             // 
@@ -602,7 +607,7 @@
             this.txtDNSServer.Location = new System.Drawing.Point(75, 22);
             this.txtDNSServer.Name = "txtDNSServer";
             this.txtDNSServer.Size = new System.Drawing.Size(139, 20);
-            this.txtDNSServer.TabIndex = 1;
+            this.txtDNSServer.TabIndex = 0;
             // 
             // tabConsole
             // 
@@ -629,7 +634,7 @@
             // 
             this.ssbMain.Location = new System.Drawing.Point(0, 398);
             this.ssbMain.Name = "ssbMain";
-            this.ssbMain.Size = new System.Drawing.Size(324, 22);
+            this.ssbMain.Size = new System.Drawing.Size(331, 22);
             this.ssbMain.TabIndex = 4;
             this.ssbMain.Text = "statusStrip1";
             // 
@@ -638,7 +643,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(324, 420);
+            this.ClientSize = new System.Drawing.Size(331, 420);
             this.Controls.Add(this.ssbMain);
             this.Controls.Add(this.TabProfiles);
             this.Controls.Add(this.tsbMain);
