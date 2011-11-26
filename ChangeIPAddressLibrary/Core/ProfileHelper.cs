@@ -16,9 +16,8 @@ namespace ChangeIPAddressLibrary.Core
         }
 
         public void Add(Base.Profile e)
-        {
-
-            throw new NotImplementedException();
+        {            
+              
         }
 
         public void Delete(Base.Profile e)

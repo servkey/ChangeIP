@@ -33,7 +33,10 @@ namespace ChangeIPAddressLibrary.Base
         public const string FSERVICENAME = "ServiceName";
         public const string FDESCRIPTION = "Description";
 
-        public const string QPROFILES = "SELECT * FROM TblProfiles";
+        //INSERT INTO TblProfiles VALUES(null,'Test',1,'192.168.3.6','255.255.255.0','192.168.5.1','192.168.5.3','00:11:22:33:44:55','setid','TestCaption','TestServiceName','TestEthernet');
+
+        public const string QPROFILES = "INSERT INTO TblProfiles VALUES({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11})";
+        public const string IPROFILES = "SELECT * FROM TblProfiles";
                 
         public int IdProfile
         {
