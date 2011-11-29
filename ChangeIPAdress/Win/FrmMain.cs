@@ -19,7 +19,7 @@ namespace ChangeIPAdress.Win
         public FrmMain()
         {
             InitializeComponent();
-                       
+                
             //Esto cambiara
             if (SettingUtil.GetLanguage().Equals(SettingUtil.GetLanguageEs()))
                 tsmLSpanish.Checked = true;
@@ -56,6 +56,11 @@ namespace ChangeIPAdress.Win
             tsbDelete.Enabled = false;
             tsbNew.Enabled = false;
             tsbSave.Enabled = true;
+
+            tsmApply.Enabled = false;
+            tsmDelete.Enabled = false;
+            tsmSave.Enabled = true;
+            tsmNew.Enabled = false;
         }
 
         private void SettingProfiles()
@@ -64,6 +69,11 @@ namespace ChangeIPAdress.Win
             tsbApply.Enabled = true;
             tsbDelete.Enabled = true;
             tsbNew.Enabled = true;
+
+            tsmApply.Enabled = true;
+            tsmDelete.Enabled = true;
+            tsmSave.Enabled = false;
+            tsmNew.Enabled = true;
         }
 
         private void LoadProfiles(){
@@ -90,17 +100,55 @@ namespace ChangeIPAdress.Win
 
         private void ReloadLanguage()
         {
-            Util.TranslateUtil.Translate(lblTDNSServer, lblTIPAddress, lblTProfile, lblTNetworkInterfaceCmb);    
+            Util.TranslateUtil.Translate(
+                this,
+                tabConsole,
+                tabProfile,
+                tabNew,
+                lblTGateway,
+                grpDNSServer,
+                grpDetails,
+                grpProfiles,
+                rdbDNSAutomatically,
+                rdbIpAutomatically,
+                rdbSpecifyDNS,
+                rdbSpecifyIp,
+                grpIPAddress,
+                grpProfiles,
+                lblTNetworkInterface,
+                lblTDNSServer, 
+                lblTIPAddress,
+                lblTProfile,
+                lblTNetworkInterfaceCmb                
+            );
+
+            Util.TranslateUtil.Translate(
+                tsbDelete,
+                tsbNew,
+                tsbExit,
+                tsbApply,
+                tsbSave,
+                tsmSave,
+                tsmAbout,
+                tsmApply,
+                tsmDelete,
+                tsmExit,
+                tsmAbout,
+                tsmNew,
+                tsmHelp,               
+                tsmLEnglish,
+                tsmLSpanish,
+                tsmPreference,
+                tsmProfile,
+                tsmLanguage                
+             );
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            //Cargar configuración para lenguaje
-            Util.TranslateUtil.InitLanguage();
-            
+            Util.TranslateUtil.InitLanguage();            
             txtConsole.Text = NetworkInterfaceHelper.GetActiveConnection();
-            ReloadLanguage();
-          //  txtConsole.Text = ChangeIPAddressLibrary.Core.NetworkInterfaceHelper.SetIP("192.168.1.200", "255.255.255.0", "192.168.1.254");
+            ReloadLanguage();        
         }
         
         private void SaveSetting()
@@ -120,6 +168,7 @@ namespace ChangeIPAdress.Win
             //Test Radio button on menu...
             tsmLSpanish.Checked = (sender == tsmLSpanish);
             tsmLEnglish.Checked = (sender == tsmLEnglish);
+          
             SaveSetting();
             TranslateUtil.InitLanguage();
             ReloadLanguage();
@@ -165,16 +214,16 @@ namespace ChangeIPAdress.Win
             try
             {
                 profileSelected = profiles[Int32.Parse(lstProfiles.SelectedIndex.ToString())];
-                lblIPAddress.Text = !profileSelected.IpAddress.Trim().Equals("") ? profileSelected.IpAddress : TranslateUtil.GetAutomaticallyTxt();
-                lblDNSServer.Text = !profileSelected.DnsServerSearchOrder.Trim().Equals("") ? profileSelected.DnsServerSearchOrder : TranslateUtil.GetAutomaticallyTxt();
-                lblGateway.Text = !profileSelected.DefaultIpGateway.Trim().Equals("") ? profileSelected.DefaultIpGateway : TranslateUtil.GetAutomaticallyTxt();
+                lblIPAddress.Text = !profileSelected.IpAddress.Trim().Equals(String.Empty) ? profileSelected.IpAddress : TranslateUtil.GetAutomaticallyTxt();
+                lblDNSServer.Text = !profileSelected.DnsServerSearchOrder.Trim().Equals(String.Empty) ? profileSelected.DnsServerSearchOrder : TranslateUtil.GetAutomaticallyTxt();
+                lblGateway.Text = !profileSelected.DefaultIpGateway.Trim().Equals(String.Empty) ? profileSelected.DefaultIpGateway : TranslateUtil.GetAutomaticallyTxt();
                 if (profileSelected.Description.Length > 25)
                     lblNetworkInterface.Text = profileSelected.Description.Substring(0, 23) + "...";
                 else
                     lblNetworkInterface.Text = profileSelected.Description;
             }
             catch {
-                MessageBox.Show("Error testing...!");
+                //MessageBox.Show(TranslateUtil.GetMsgSelectProfile());
             }
         }
 
@@ -191,7 +240,11 @@ namespace ChangeIPAdress.Win
 
                     p.Caption = ni.Caption;                    
                     p.Description = ni.Description;
+                    p.ProfileName = txtProfile.Text;
+                    p.ServiceName = ni.ServiceName;
+                    p.SettingId = ni.SettingID;                    
                     p.DhcpEnabled = this.rdbIpAutomatically.Checked;
+
                     if (p.DhcpEnabled)                    
                     {
                         p.DefaultIpGateway = txtGateway.Text;
@@ -203,20 +256,16 @@ namespace ChangeIPAdress.Win
                     if (!rdbDNSAutomatically.Checked)
                         p.DnsServerSearchOrder = txtDNSServer.Text;
                     
-                    p.ProfileName = txtProfile.Text;
-                    p.ServiceName = ni.ServiceName;
-                    p.SettingId = ni.SettingID;
-                    
-
+                
                     pHelper.Add(p);
                     LoadProfiles();
                     LoadNew();
-                    MessageBox.Show("Saved...!");
+                    MessageBox.Show(TranslateUtil.GetMsgSavedProfile(), this.Text,MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
             catch {
-                MessageBox.Show("Error saving...!");
+                MessageBox.Show(TranslateUtil.GetMsgErrorProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -230,14 +279,25 @@ namespace ChangeIPAdress.Win
             if (TabProfiles.SelectedIndex == 0)
             {
                 try{
-                    ProfileHelper profileHelper = new ProfileHelper();
-                    Profile profile = new Profile
+                    if (lstProfiles.SelectedValue != null)
                     {
-                         IdProfile = Int32.Parse(lstProfiles.SelectedValue.ToString())
-                    };
-                    profileHelper.Delete(profile);
-                    profileSelected = null;
-                    LoadProfiles();     
+                        ProfileHelper profileHelper = new ProfileHelper();
+                        Profile profile = new Profile
+                        {
+                            IdProfile = Int32.Parse(lstProfiles.SelectedValue.ToString())
+                        };
+                        DialogResult r = MessageBox.Show(String.Format(TranslateUtil.GetMsgConfirmDelete(), ((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (r == DialogResult.Yes) 
+                        {
+                            profileHelper.Delete(profile);
+                            profileSelected = null;
+                            LoadProfiles();
+                        }
+                    }
+                    else
+                        MessageBox.Show(TranslateUtil.GetMsgSelectProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
                 }catch{}
             }
         }
@@ -255,11 +315,13 @@ namespace ChangeIPAdress.Win
                 {
                     if (lstProfiles.SelectedValue != null)
                     {
+                        bool error = false;
                         if (!profileSelected.DhcpEnabled)
                         {
-                            if (!NetworkInterfaceHelper.SetIP(profileSelected.MacAddress, profileSelected.IpAddress, profileSelected.IpSubnet, profileSelected.DefaultIpGateway))
+                            if (!(NetworkInterfaceHelper.SetIP(profileSelected.MacAddress, profileSelected.IpAddress, profileSelected.IpSubnet, profileSelected.DefaultIpGateway)))
                             {
-                                MessageBox.Show("Network Interface not found!", "Setting");
+                                MessageBox.Show(TranslateUtil.GetMsgErrorNetworkInterface(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                error = true;
                             }
                         }
                         else
@@ -269,22 +331,36 @@ namespace ChangeIPAdress.Win
 
                         if (!profileSelected.DnsServerSearchOrder.Trim().Equals(String.Empty))
                         {
-                            if (!NetworkInterfaceHelper.SetDNS(profileSelected.MacAddress, profileSelected.DnsServerSearchOrder))
+                            if (!(NetworkInterfaceHelper.SetDNS(profileSelected.MacAddress, profileSelected.DnsServerSearchOrder)))
                             {
-                                MessageBox.Show("DNS error, Network Interface not found!", "Setting");
+                                MessageBox.Show(TranslateUtil.GetMsgErrorDNSNetworkInterface(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                error = true;
                             }
                         }
                         else
                         {
                             NetworkInterfaceHelper.SetDNSAutomatically(profileSelected.MacAddress);
                         }
+                        
+                        if (!error)
+                            MessageBox.Show(String.Format(TranslateUtil.GetMsgAppliedProfile(),((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }else
-                        MessageBox.Show("Selected perfil.","Setting");
+                        MessageBox.Show(TranslateUtil.GetMsgSelectProfile(), this.Text);
+
+                    
                 }
-                catch (Exception e1){
-                    MessageBox.Show("Error apply");
+                catch{
+                    MessageBox.Show(TranslateUtil.GetMsgErrorSetting());
                 }
             }
+        }
+
+        private void tsmAbout_Click(object sender, EventArgs e)
+        {
+            FrmAbout about = new FrmAbout();
+            about.ShowDialog();
+            
         }
     }
 }

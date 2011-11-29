@@ -25,7 +25,7 @@ namespace ChangeIPAddressLibrary.Core
                         try
                         {
                             string val = managementObject.GetPropertyValue("Caption").ToString();
-                            string result0 = "*******************************************************";
+                            string result0 = "***********************************************************";
                             result0 += "\nCaption: " + val;
                             val = managementObject.GetPropertyValue("ServiceName").ToString();
                             result0 += "\nService Name: " + val;
@@ -40,7 +40,7 @@ namespace ChangeIPAddressLibrary.Core
                             val = managementObject.GetPropertyValue("MACAddress").ToString();
                             result0 += "\nMACAddress: " + val;
                             result0 += "\n";
-                            result0 += "*******************************************************\n";
+                            result0 += "***********************************************************\n";
                             result += result0;
                         }
                         catch { }

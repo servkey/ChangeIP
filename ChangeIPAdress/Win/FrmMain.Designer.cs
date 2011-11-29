@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tsbMain = new System.Windows.Forms.ToolStrip();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
             this.tsbNew = new System.Windows.Forms.ToolStripButton();
@@ -38,6 +39,7 @@
             this.tsmProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmNew = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmApply = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,6 +182,7 @@
             this.tsmProfile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmNew,
             this.tsmSave,
+            this.tsmApply,
             this.tsmDelete,
             this.toolStripMenuItem2,
             this.tsmExit});
@@ -201,6 +204,13 @@
             this.tsmSave.Text = "Save";
             this.tsmSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
+            // tsmApply
+            // 
+            this.tsmApply.Name = "tsmApply";
+            this.tsmApply.Size = new System.Drawing.Size(152, 22);
+            this.tsmApply.Text = "Apply";
+            this.tsmApply.Click += new System.EventHandler(this.tsbSave_Click);
+            // 
             // tsmDelete
             // 
             this.tsmDelete.Name = "tsmDelete";
@@ -211,12 +221,12 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(104, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(107, 22);
+            this.tsmExit.Size = new System.Drawing.Size(152, 22);
             this.tsmExit.Text = "Exit";
             this.tsmExit.Click += new System.EventHandler(this.tsbExit_Click);
             // 
@@ -234,13 +244,13 @@
             this.tsmLEnglish,
             this.tsmLSpanish});
             this.tsmLanguage.Name = "tsmLanguage";
-            this.tsmLanguage.Size = new System.Drawing.Size(126, 22);
+            this.tsmLanguage.Size = new System.Drawing.Size(152, 22);
             this.tsmLanguage.Text = "Language";
             // 
             // tsmLEnglish
             // 
             this.tsmLEnglish.Name = "tsmLEnglish";
-            this.tsmLEnglish.Size = new System.Drawing.Size(115, 22);
+            this.tsmLEnglish.Size = new System.Drawing.Size(152, 22);
             this.tsmLEnglish.Text = "English";
             this.tsmLEnglish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
@@ -248,7 +258,7 @@
             // 
             this.tsmLSpanish.CheckOnClick = true;
             this.tsmLSpanish.Name = "tsmLSpanish";
-            this.tsmLSpanish.Size = new System.Drawing.Size(115, 22);
+            this.tsmLSpanish.Size = new System.Drawing.Size(152, 22);
             this.tsmLSpanish.Text = "Spanish";
             this.tsmLSpanish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
@@ -263,8 +273,9 @@
             // tsmAbout
             // 
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(116, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(152, 22);
             this.tsmAbout.Text = "About...";
+            this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
             // TabProfiles
             // 
@@ -657,6 +668,7 @@
             this.Controls.Add(this.tsbMain);
             this.Controls.Add(this.mnuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuMain;
             this.MaximizeBox = false;
             this.Name = "FrmMain";
@@ -744,5 +756,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmLEnglish;
         private System.Windows.Forms.ToolStripMenuItem tsmLSpanish;
         private System.Windows.Forms.ToolStripButton tsbNew;
+        private System.Windows.Forms.ToolStripMenuItem tsmApply;
     }
 }

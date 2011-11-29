@@ -28,6 +28,50 @@ namespace ChangeIPAdress.Util
         {
             return resourceManager.GetString(name);
         }
+                
+        
+        public static string GetMsgAppliedProfile()
+        {
+            return Get("msgAppliedProfile");
+        }
+
+        public static string GetMsgConfirmDelete()
+        {
+            return Get("msgConfirmDelete");
+        }
+
+        public static string GetMsgSelectProfile()
+        {
+            return Get("msgSelectProfile");
+        }
+        
+
+        public static string GetMsgErrorSetting()
+        {
+            return Get("msgErrorSetting");
+        }
+
+        public static string GetMsgSavedProfile()
+        {
+            return Get("msgSaved");
+        }
+
+        public static string GetMsgErrorProfile()
+        {
+            return Get("msgErrorSaving");
+        }
+        
+        public static string GetMsgErrorNetworkInterface()
+        {
+            return Get("msgErrorNetworkInterface");
+        }
+
+         public static string GetMsgErrorDNSNetworkInterface()
+        {
+            return Get("msgErrorDNSNetworkInterface");
+        }
+        
+        
 
         public static string GetProfileTxt()
         {
@@ -46,5 +90,14 @@ namespace ChangeIPAdress.Util
                 c.Text = resourceManager.GetString(c.Name + "Txt");
             //element.Name  
         }
+
+        public static void Translate(params ToolStripItem[] controls) 
+        {
+
+            foreach (ToolStripItem c in controls)                
+                c.Text = resourceManager.GetString(c.Name + "Txt");
+            //element.Name  
+        }
+        
     }
 }

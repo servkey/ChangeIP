@@ -81,9 +81,9 @@ namespace ChangeIPAdress.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Select Profile.
         /// </summary>
-        internal static string grpProfiles {
+        internal static string grpProfilesTxt {
             get {
-                return ResourceManager.GetString("grpProfiles", resourceCulture);
+                return ResourceManager.GetString("grpProfilesTxt", resourceCulture);
             }
         }
         
@@ -187,6 +187,87 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &quot;{0}&quot; profile applied..
+        /// </summary>
+        internal static string msgAppliedProfile {
+            get {
+                return ResourceManager.GetString("msgAppliedProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings applied correctly..
+        /// </summary>
+        internal static string msgAppliedSetting {
+            get {
+                return ResourceManager.GetString("msgAppliedSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you certain you want to delete the &quot;{0}&quot; profile?.
+        /// </summary>
+        internal static string msgConfirmDelete {
+            get {
+                return ResourceManager.GetString("msgConfirmDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DNS error,  not found network interface..
+        /// </summary>
+        internal static string msgErrorDNSNetworkInterface {
+            get {
+                return ResourceManager.GetString("msgErrorDNSNetworkInterface", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not found network interface..
+        /// </summary>
+        internal static string msgErrorNetworkInterface {
+            get {
+                return ResourceManager.GetString("msgErrorNetworkInterface", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error saving profile..
+        /// </summary>
+        internal static string msgErrorSaving {
+            get {
+                return ResourceManager.GetString("msgErrorSaving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to apply settings..
+        /// </summary>
+        internal static string msgErrorSetting {
+            get {
+                return ResourceManager.GetString("msgErrorSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved profile..
+        /// </summary>
+        internal static string msgSaved {
+            get {
+                return ResourceManager.GetString("msgSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the profile to continue..
+        /// </summary>
+        internal static string msgSelectProfile {
+            get {
+                return ResourceManager.GetString("msgSelectProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Obtain DNS Server Address automatically.
         /// </summary>
         internal static string rdbDNSAutomaticallyTxt {
@@ -243,9 +324,9 @@ namespace ChangeIPAdress.Resources {
         /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
-        internal static string tabNew {
+        internal static string tabNewTxt {
             get {
-                return ResourceManager.GetString("tabNew", resourceCulture);
+                return ResourceManager.GetString("tabNewTxt", resourceCulture);
             }
         }
         
@@ -259,7 +340,7 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apply profile.
+        ///   Looks up a localized string similar to Apply.
         /// </summary>
         internal static string tsbApplyTxt {
             get {
@@ -268,7 +349,7 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete profile.
+        ///   Looks up a localized string similar to Delete.
         /// </summary>
         internal static string tsbDeleteTxt {
             get {
@@ -295,7 +376,7 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save profile.
+        ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string tsbSaveTxt {
             get {
@@ -309,6 +390,15 @@ namespace ChangeIPAdress.Resources {
         internal static string tsmAboutTxt {
             get {
                 return ResourceManager.GetString("tsmAboutTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        internal static string tsmApplyTxt {
+            get {
+                return ResourceManager.GetString("tsmApplyTxt", resourceCulture);
             }
         }
         
@@ -358,6 +448,24 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string tsmLEnglishTxt {
+            get {
+                return ResourceManager.GetString("tsmLEnglishTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spanish.
+        /// </summary>
+        internal static string tsmLSpanishTxt {
+            get {
+                return ResourceManager.GetString("tsmLSpanishTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New....
         /// </summary>
         internal static string tsmNewTxt {
@@ -394,16 +502,7 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Spanish.
-        /// </summary>
-        internal static string tsmSpanishTxt {
-            get {
-                return ResourceManager.GetString("tsmSpanishTxt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New Profile....
+        ///   Looks up a localized string similar to New profile....
         /// </summary>
         internal static string txtProfileTxt {
             get {

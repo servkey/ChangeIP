@@ -123,7 +123,7 @@
   <data name="grpDetailsTxt" xml:space="preserve">
     <value>Details</value>
   </data>
-  <data name="grpProfiles" xml:space="preserve">
+  <data name="grpProfilesTxt" xml:space="preserve">
     <value>Select Profile</value>
   </data>
   <data name="lblAutomaticallyTxt" xml:space="preserve">
@@ -159,6 +159,33 @@
   <data name="lblTProfileTxt" xml:space="preserve">
     <value>Profile Name</value>
   </data>
+  <data name="msgAppliedProfile" xml:space="preserve">
+    <value>"{0}" profile applied.</value>
+  </data>
+  <data name="msgAppliedSetting" xml:space="preserve">
+    <value>Settings applied correctly.</value>
+  </data>
+  <data name="msgConfirmDelete" xml:space="preserve">
+    <value>Are you certain you want to delete the "{0}" profile?</value>
+  </data>
+  <data name="msgErrorDNSNetworkInterface" xml:space="preserve">
+    <value>DNS error,  not found network interface.</value>
+  </data>
+  <data name="msgErrorNetworkInterface" xml:space="preserve">
+    <value>Not found network interface.</value>
+  </data>
+  <data name="msgErrorSaving" xml:space="preserve">
+    <value>Error saving profile.</value>
+  </data>
+  <data name="msgErrorSetting" xml:space="preserve">
+    <value>Failed to apply settings.</value>
+  </data>
+  <data name="msgSaved" xml:space="preserve">
+    <value>Saved profile.</value>
+  </data>
+  <data name="msgSelectProfile" xml:space="preserve">
+    <value>Select the profile to continue.</value>
+  </data>
   <data name="rdbDNSAutomaticallyTxt" xml:space="preserve">
     <value>Obtain DNS Server Address automatically</value>
   </data>
@@ -177,17 +204,17 @@
   <data name="tabConsoleTxt" xml:space="preserve">
     <value>Console</value>
   </data>
-  <data name="tabNew" xml:space="preserve">
+  <data name="tabNewTxt" xml:space="preserve">
     <value>New</value>
   </data>
   <data name="tabProfileTxt" xml:space="preserve">
     <value>Profiles</value>
   </data>
   <data name="tsbApplyTxt" xml:space="preserve">
-    <value>Apply profile</value>
+    <value>Apply</value>
   </data>
   <data name="tsbDeleteTxt" xml:space="preserve">
-    <value>Delete profile</value>
+    <value>Delete</value>
   </data>
   <data name="tsbExitTxt" xml:space="preserve">
     <value>Exit</value>
@@ -196,10 +223,13 @@
     <value>New...</value>
   </data>
   <data name="tsbSaveTxt" xml:space="preserve">
-    <value>Save profile</value>
+    <value>Save</value>
   </data>
   <data name="tsmAboutTxt" xml:space="preserve">
     <value>About...</value>
+  </data>
+  <data name="tsmApplyTxt" xml:space="preserve">
+    <value>Apply</value>
   </data>
   <data name="tsmDeleteTxt" xml:space="preserve">
     <value>Delete</value>
@@ -216,6 +246,12 @@
   <data name="tsmLanguageTxt" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="tsmLEnglishTxt" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="tsmLSpanishTxt" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
   <data name="tsmNewTxt" xml:space="preserve">
     <value>New...</value>
   </data>
@@ -228,10 +264,7 @@
   <data name="tsmSaveTxt" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="tsmSpanishTxt" xml:space="preserve">
-    <value>Spanish</value>
-  </data>
   <data name="txtProfileTxt" xml:space="preserve">
-    <value>New Profile...</value>
+    <value>New profile...</value>
   </data>
 </root>

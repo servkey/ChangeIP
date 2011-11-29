@@ -123,8 +123,8 @@
   <data name="grpDetailsTxt" xml:space="preserve">
     <value>Detalles</value>
   </data>
-  <data name="grpProfiles" xml:space="preserve">
-    <value>Select Profile</value>
+  <data name="grpProfilesTxt" xml:space="preserve">
+    <value>Seleccionar perfil</value>
   </data>
   <data name="lblAutomaticallyTxt" xml:space="preserve">
     <value>Automatically...</value>
@@ -145,7 +145,7 @@
     <value>Servidor DNS</value>
   </data>
   <data name="lblTGatewayTxt" xml:space="preserve">
-    <value>Gateway</value>
+    <value>Puerta de enlace</value>
   </data>
   <data name="lblTIPAddressTxt" xml:space="preserve">
     <value>Dirección IP</value>
@@ -159,79 +159,109 @@
   <data name="lblTProfileTxt" xml:space="preserve">
     <value>Nom. Perfil</value>
   </data>
+  <data name="msgAppliedProfile" xml:space="preserve">
+    <value>Perfil "{0}" aplicado.</value>
+  </data>
+  <data name="msgAppliedSetting" xml:space="preserve">
+    <value>Configuración aplicada correctamente.</value>
+  </data>
+  <data name="msgConfirmDelete" xml:space="preserve">
+    <value>¿Estás seguro que quieres eliminar el perfil "{0}" ?</value>
+  </data>
+  <data name="msgErrorDNSNetworkInterface" xml:space="preserve">
+    <value>Error DNS,  interfaz de red no encontrada.</value>
+  </data>
+  <data name="msgErrorNetworkInterface" xml:space="preserve">
+    <value>Interfaz de red no encontrada.</value>
+  </data>
+  <data name="msgErrorSaving" xml:space="preserve">
+    <value>Error guardando perfil.</value>
+  </data>
+  <data name="msgErrorSetting" xml:space="preserve">
+    <value>Error al aplicar configuración.</value>
+  </data>
+  <data name="msgSaved" xml:space="preserve">
+    <value>Perfil guardado.</value>
+  </data>
+  <data name="msgSelectProfile" xml:space="preserve">
+    <value>Selecciona perfil para continuar.</value>
+  </data>
   <data name="rdbDNSAutomaticallyTxt" xml:space="preserve">
-    <value>Obtain DNS Server Address automatically</value>
+    <value>Obtener dirección DNS automaticamente</value>
   </data>
   <data name="rdbIpAutomaticallyTxt" xml:space="preserve">
-    <value>Obtain IP Address automatically</value>
+    <value>Obtener dirección IP automaticamente</value>
   </data>
   <data name="rdbSpecifyDNSTxt" xml:space="preserve">
-    <value>Use the following DNS Server address</value>
+    <value>Usar la siguiente dirección DNS</value>
   </data>
   <data name="rdbSpecifyIpTxt" xml:space="preserve">
-    <value>Specify an IP address</value>
+    <value>Especificar dirección IP</value>
   </data>
   <data name="strMessage" xml:space="preserve">
-    <value>Change IP Address</value>
+    <value>Cambiar dirección IP</value>
   </data>
   <data name="tabConsoleTxt" xml:space="preserve">
-    <value>Console</value>
+    <value>Consola</value>
   </data>
-  <data name="tabNew" xml:space="preserve">
-    <value>New</value>
+  <data name="tabNewTxt" xml:space="preserve">
+    <value>Nuevo</value>
   </data>
   <data name="tabProfileTxt" xml:space="preserve">
-    <value>Profiles</value>
+    <value>Perfiles</value>
   </data>
   <data name="tsbApplyTxt" xml:space="preserve">
-    <value>Apply profile</value>
+    <value>Aplicar</value>
   </data>
   <data name="tsbDeleteTxt" xml:space="preserve">
-    <value>Delete profile</value>
+    <value>Eliminar</value>
   </data>
   <data name="tsbExitTxt" xml:space="preserve">
-    <value>Exit</value>
+    <value>Salir</value>
   </data>
   <data name="tsbNewTxt" xml:space="preserve">
-    <value>New...</value>
+    <value>Nuevo...</value>
   </data>
   <data name="tsbSaveTxt" xml:space="preserve">
-    <value>Save profile</value>
+    <value>Guardar</value>
   </data>
   <data name="tsmAboutTxt" xml:space="preserve">
-    <value>About...</value>
+    <value>Acerca de...</value>
+  </data>
+  <data name="tsmApplyTxt" xml:space="preserve">
+    <value>Aplicar</value>
   </data>
   <data name="tsmDeleteTxt" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="tsmEnglishTxt" xml:space="preserve">
-    <value>English</value>
+    <value>Eliminar</value>
   </data>
   <data name="tsmExitTxt" xml:space="preserve">
-    <value>Exit</value>
+    <value>Salir</value>
   </data>
   <data name="tsmHelpTxt" xml:space="preserve">
-    <value>Help</value>
+    <value>Ayuda</value>
   </data>
   <data name="tsmLanguageTxt" xml:space="preserve">
-    <value>Language</value>
+    <value>Lenguaje</value>
+  </data>
+  <data name="tsmLEnglishTxt" xml:space="preserve">
+    <value>Inglés</value>
+  </data>
+  <data name="tsmLSpanishTxt" xml:space="preserve">
+    <value>Español</value>
   </data>
   <data name="tsmNewTxt" xml:space="preserve">
-    <value>New...</value>
+    <value>Nuevo...</value>
   </data>
   <data name="tsmPreferenceTxt" xml:space="preserve">
-    <value>Preference</value>
+    <value>Preferencia</value>
   </data>
   <data name="tsmProfileTxt" xml:space="preserve">
-    <value>Profile</value>
+    <value>Perfil</value>
   </data>
   <data name="tsmSaveTxt" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="tsmSpanishTxt" xml:space="preserve">
-    <value>Spanish</value>
+    <value>Guardar</value>
   </data>
   <data name="txtProfileTxt" xml:space="preserve">
-    <value>New Profile...</value>
+    <value>Nuevo perfil...</value>
   </data>
 </root>
