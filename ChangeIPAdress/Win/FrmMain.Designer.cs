@@ -190,20 +190,23 @@
             // tsmNew
             // 
             this.tsmNew.Name = "tsmNew";
-            this.tsmNew.Size = new System.Drawing.Size(107, 22);
+            this.tsmNew.Size = new System.Drawing.Size(152, 22);
             this.tsmNew.Text = "New...";
+            this.tsmNew.Click += new System.EventHandler(this.tsbNew_Click);
             // 
             // tsmSave
             // 
             this.tsmSave.Name = "tsmSave";
-            this.tsmSave.Size = new System.Drawing.Size(107, 22);
+            this.tsmSave.Size = new System.Drawing.Size(152, 22);
             this.tsmSave.Text = "Save";
+            this.tsmSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
             // tsmDelete
             // 
             this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(107, 22);
+            this.tsmDelete.Size = new System.Drawing.Size(152, 22);
             this.tsmDelete.Text = "Delete";
+            this.tsmDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
             // toolStripMenuItem2
             // 
