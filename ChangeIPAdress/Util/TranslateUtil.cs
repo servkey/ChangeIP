@@ -29,6 +29,11 @@ namespace ChangeIPAdress.Util
             return resourceManager.GetString(name);
         }
                 
+       
+        public static string GetSeparator()
+        {
+            return Get("lblSeparatorTxt");
+        }
         
         public static string GetMsgAppliedProfile()
         {

@@ -209,7 +209,7 @@
             this.tsmApply.Name = "tsmApply";
             this.tsmApply.Size = new System.Drawing.Size(152, 22);
             this.tsmApply.Text = "Apply";
-            this.tsmApply.Click += new System.EventHandler(this.tsbSave_Click);
+            this.tsmApply.Click += new System.EventHandler(this.tsbApply_Click);
             // 
             // tsmDelete
             // 

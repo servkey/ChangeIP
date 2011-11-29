@@ -78,6 +78,10 @@ namespace ChangeIPAdress.Win
 
         private void LoadProfiles(){
             
+            lblIPAddress.Text = TranslateUtil.GetSeparator();
+            lblDNSServer.Text = TranslateUtil.GetSeparator();
+            lblGateway.Text = TranslateUtil.GetSeparator();            
+
             ChangeIPAddressLibrary.Core.ProfileHelper dbProfiles = new ChangeIPAddressLibrary.Core.ProfileHelper();
             profiles = dbProfiles.GetAll();
             this.lstProfiles.DataSource = profiles;
@@ -244,12 +248,11 @@ namespace ChangeIPAdress.Win
                     p.ServiceName = ni.ServiceName;
                     p.SettingId = ni.SettingID;                    
                     p.DhcpEnabled = this.rdbIpAutomatically.Checked;
-
-                    if (p.DhcpEnabled)                    
+                    p.MacAddress = ni.MACAddress;
+                    if (!p.DhcpEnabled)                    
                     {
                         p.DefaultIpGateway = txtGateway.Text;
-                        p.IpSubnet = txtIPSubnet.Text;
-                        p.MacAddress = ni.MACAddress;
+                        p.IpSubnet = txtIPSubnet.Text;                      
                         p.IpAddress = txtIPAddress.Text;
                     }
                     
@@ -341,17 +344,20 @@ namespace ChangeIPAdress.Win
                         {
                             NetworkInterfaceHelper.SetDNSAutomatically(profileSelected.MacAddress);
                         }
-                        
+
                         if (!error)
-                            MessageBox.Show(String.Format(TranslateUtil.GetMsgAppliedProfile(),((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        {
+                            MessageBox.Show(String.Format(TranslateUtil.GetMsgAppliedProfile(), ((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtConsole.Text = NetworkInterfaceHelper.GetActiveConnection();
+                        }
 
                     }else
-                        MessageBox.Show(TranslateUtil.GetMsgSelectProfile(), this.Text);
+                        MessageBox.Show(TranslateUtil.GetMsgSelectProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     
                 }
                 catch{
-                    MessageBox.Show(TranslateUtil.GetMsgErrorSetting());
+                    MessageBox.Show(TranslateUtil.GetMsgErrorSetting(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

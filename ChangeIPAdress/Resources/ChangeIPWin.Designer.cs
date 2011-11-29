@@ -259,7 +259,7 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the profile to continue..
+        ///   Looks up a localized string similar to Select profile to continue..
         /// </summary>
         internal static string msgSelectProfile {
             get {

@@ -25,10 +25,13 @@ namespace ChangeIPAddressLibrary.Core
                         try
                         {
                             string val = managementObject.GetPropertyValue("Caption").ToString();
-                            string result0 = "***********************************************************";
+                            string result0 = "**************************************************************";
                             result0 += "\nCaption: " + val;
                             val = managementObject.GetPropertyValue("ServiceName").ToString();
                             result0 += "\nService Name: " + val;
+
+                         
+                            
                             val = managementObject.GetPropertyValue("SettingID").ToString();
                             result0 += "\nSettingId: " + val;
                             val = managementObject.GetPropertyValue("Description").ToString();
@@ -37,10 +40,25 @@ namespace ChangeIPAddressLibrary.Core
                             string ip = ips[0].ToString();
                             val = ip;
                             result0 += "\nIPAddress: " + val;
+
+                            try
+                            {
+                                string[] gateway = ((string[])managementObject.GetPropertyValue("DefaultIPGateway"));
+                                result0 += "\nIP Gateway: " + gateway[0];
+                            }
+                            catch { }
+
+                            try
+                            {
+                                string[] dns = ((string[])managementObject.GetPropertyValue("DNSServerSearchOrder"));
+                                result0 += "\nDNS Server: " + dns[0];
+                            }
+                            catch { }
+
                             val = managementObject.GetPropertyValue("MACAddress").ToString();
                             result0 += "\nMACAddress: " + val;
                             result0 += "\n";
-                            result0 += "***********************************************************\n";
+                            result0 += "**************************************************************\n";
                             result += result0;
                         }
                         catch { }

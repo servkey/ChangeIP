@@ -184,7 +184,7 @@
     <value>Saved profile.</value>
   </data>
   <data name="msgSelectProfile" xml:space="preserve">
-    <value>Select the profile to continue.</value>
+    <value>Select profile to continue.</value>
   </data>
   <data name="rdbDNSAutomaticallyTxt" xml:space="preserve">
     <value>Obtain DNS Server Address automatically</value>
