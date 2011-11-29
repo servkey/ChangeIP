@@ -126,6 +126,9 @@
   <data name="grpProfiles" xml:space="preserve">
     <value>Select Profile</value>
   </data>
+  <data name="lblAutomaticallyTxt" xml:space="preserve">
+    <value>Automatically...</value>
+  </data>
   <data name="lblGatewayTxt" xml:space="preserve">
     <value>Gateway</value>
   </data>

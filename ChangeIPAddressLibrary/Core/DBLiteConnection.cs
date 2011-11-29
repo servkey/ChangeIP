@@ -21,7 +21,7 @@ namespace ChangeIPAddressLibrary.Core
             int rows = 0;
             SQLiteConnection con = new SQLiteConnection(strConnection);
             con.Open();
-            SQLiteCommand command = new SQLiteCommand();
+            SQLiteCommand command = new SQLiteCommand(con);
             command.CommandText = sql;
             rows = command.ExecuteNonQuery();
             con.Close();

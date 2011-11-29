@@ -119,6 +119,7 @@
             this.tsbSave.Name = "tsbSave";
             this.tsbSave.Size = new System.Drawing.Size(23, 22);
             this.tsbSave.Text = "Save profile";
+            this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
             // tsbNew
             // 
@@ -128,6 +129,7 @@
             this.tsbNew.Name = "tsbNew";
             this.tsbNew.Size = new System.Drawing.Size(23, 22);
             this.tsbNew.Text = "New...";
+            this.tsbNew.Click += new System.EventHandler(this.tsbNew_Click);
             // 
             // tsbDelete
             // 
@@ -137,6 +139,7 @@
             this.tsbDelete.Name = "tsbDelete";
             this.tsbDelete.Size = new System.Drawing.Size(23, 22);
             this.tsbDelete.Text = "Delete profile";
+            this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
             // tsbApply
             // 
@@ -146,6 +149,7 @@
             this.tsbApply.Name = "tsbApply";
             this.tsbApply.Size = new System.Drawing.Size(23, 22);
             this.tsbApply.Text = "Apply profile";
+            this.tsbApply.Click += new System.EventHandler(this.tsbApply_Click);
             // 
             // tsbExit
             // 
@@ -416,7 +420,7 @@
             this.tabNew.Location = new System.Drawing.Point(4, 22);
             this.tabNew.Name = "tabNew";
             this.tabNew.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNew.Size = new System.Drawing.Size(305, 317);
+            this.tabNew.Size = new System.Drawing.Size(312, 317);
             this.tabNew.TabIndex = 0;
             this.tabNew.Text = "New";
             this.tabNew.UseVisualStyleBackColor = true;
@@ -581,6 +585,7 @@
             this.cmbInterfaces.Name = "cmbInterfaces";
             this.cmbInterfaces.Size = new System.Drawing.Size(227, 21);
             this.cmbInterfaces.TabIndex = 5;
+            this.cmbInterfaces.SelectedIndexChanged += new System.EventHandler(this.cmbInterfaces_SelectedIndexChanged);
             // 
             // grpDNSServer
             // 
@@ -615,7 +620,7 @@
             this.tabConsole.Location = new System.Drawing.Point(4, 22);
             this.tabConsole.Name = "tabConsole";
             this.tabConsole.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsole.Size = new System.Drawing.Size(305, 317);
+            this.tabConsole.Size = new System.Drawing.Size(312, 317);
             this.tabConsole.TabIndex = 1;
             this.tabConsole.Text = "Console";
             this.tabConsole.UseVisualStyleBackColor = true;

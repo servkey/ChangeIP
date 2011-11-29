@@ -88,6 +88,15 @@ namespace ChangeIPAdress.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Automatically....
+        /// </summary>
+        internal static string lblAutomaticallyTxt {
+            get {
+                return ResourceManager.GetString("lblAutomaticallyTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gateway.
         /// </summary>
         internal static string lblGatewayTxt {

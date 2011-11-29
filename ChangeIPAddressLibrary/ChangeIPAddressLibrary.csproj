@@ -48,8 +48,9 @@
     <Compile Include="Base\Profile.cs" />
     <Compile Include="Core\DBLiteConnection.cs" />
     <Compile Include="Core\IHelper.cs" />
-    <Compile Include="Core\IPSetting.cs" />
+    <Compile Include="Core\NetworkInterfaceHelper.cs" />
     <Compile Include="Core\ProfileHelper.cs" />
+    <Compile Include="ExceptionIP\ProfileException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

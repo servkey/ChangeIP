@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ChangeIPAdress.Util;
+using ChangeIPAddressLibrary.Base;
+using ChangeIPAddressLibrary.Core;
 
 namespace ChangeIPAdress.Win
 {
     public partial class FrmMain : Form
     {
         private List<ChangeIPAddressLibrary.Base.Profile> profiles;
+        private ChangeIPAddressLibrary.Base.Profile profileSelected;
         public FrmMain()
         {
             InitializeComponent();
-
-          
-            
+                       
             //Esto cambiara
             if (SettingUtil.GetLanguage().Equals(SettingUtil.GetLanguageEs()))
                 tsmLSpanish.Checked = true;
@@ -26,15 +27,60 @@ namespace ChangeIPAdress.Win
                 tsmLEnglish.Checked = true;
 
             LoadProfiles();
+            SettingProfiles();
+            LoadInterfaces();
+        }
+        private void ResetNew()
+        {
+
+            
+        }
+
+        private void LoadNew()
+        {
+            //
+         
+            ControlUtil.Clear(txtGateway, txtDNSServer, txtProfile, txtIPSubnet, txtIPAddress);
+            rdbDNSAutomatically.Checked = true;
+            rdbIpAutomatically.Checked = true;
+            txtProfile.Text = TranslateUtil.GetProfileTxt();
+            txtProfile.SelectionStart = 0;
+            txtProfile.SelectionLength = txtProfile.Text.Length;
+            txtProfile.Focus();
+            ///
+        }
+
+        private void SettingNew()
+        {
+            tsbApply.Enabled = false;
+            tsbDelete.Enabled = false;
+            tsbNew.Enabled = false;
+            tsbSave.Enabled = true;
+        }
+
+        private void SettingProfiles()
+        {
+            tsbSave.Enabled = false;            
+            tsbApply.Enabled = true;
+            tsbDelete.Enabled = true;
+            tsbNew.Enabled = true;
         }
 
         private void LoadProfiles(){
+            
             ChangeIPAddressLibrary.Core.ProfileHelper dbProfiles = new ChangeIPAddressLibrary.Core.ProfileHelper();
             profiles = dbProfiles.GetAll();
             this.lstProfiles.DataSource = profiles;
             this.lstProfiles.DisplayMember = ChangeIPAddressLibrary.Base.Profile.FPROFILE;
             this.lstProfiles.ValueMember = ChangeIPAddressLibrary.Base.Profile.FIDPROFILE;
-            cmbInterfaces.DataSource = ChangeIPAddressLibrary.Core.IPSetting.GetAllNetworkInterfaces();
+        }
+
+        private void LoadInterfaces()
+        {
+            this.cmbInterfaces.DataSource = ChangeIPAddressLibrary.Core.NetworkInterfaceHelper.GetAllNetworkInterfaces();            
+            this.cmbInterfaces.DisplayMember = ChangeIPAddressLibrary.Base.Profile.FDESCRIPTION;
+            this.cmbInterfaces.ValueMember = ChangeIPAddressLibrary.Base.Profile.FMACADDRESS;
+                
             try
             {
                 lstProfiles.SelectedIndex = 0;
@@ -51,10 +97,10 @@ namespace ChangeIPAdress.Win
         {
             //Cargar configuración para lenguaje
             Util.TranslateUtil.InitLanguage();
+            
+            txtConsole.Text = NetworkInterfaceHelper.GetActiveConnection();
             ReloadLanguage();
-
-            cmbInterfaces.DisplayMember = ChangeIPAddressLibrary.Base.Profile.FDESCRIPTION;
-            txtConsole.Text = ChangeIPAddressLibrary.Core.IPSetting.SetIP("192.168.1.200", "255.255.255.0", "192.168.1.254");
+          //  txtConsole.Text = ChangeIPAddressLibrary.Core.NetworkInterfaceHelper.SetIP("192.168.1.200", "255.255.255.0", "192.168.1.254");
         }
         
         private void SaveSetting()
@@ -89,14 +135,18 @@ namespace ChangeIPAdress.Win
             Application.Exit();
         }
 
+        
+
         private void TabProfiles_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TabProfiles.SelectedTab == tabNew)
             {
-                txtProfile.SelectionStart = 0;                
-                txtProfile.SelectionLength = txtProfile.Text.Length;
-                txtProfile.Focus();
-
+                LoadNew();
+                SettingNew();
+            }
+            else if (TabProfiles.SelectedTab == tabProfile)
+            {
+                SettingProfiles();
             }
         }
 
@@ -114,21 +164,127 @@ namespace ChangeIPAdress.Win
         {
             try
             {
-                ChangeIPAddressLibrary.Base.Profile p = profiles[Int32.Parse(lstProfiles.SelectedIndex.ToString())];
-                lblIPAddress.Text = p.IpAddress;
-                lblDNSServer.Text = p.DnsServerSearchOrder;
-                lblGateway.Text = p.DefaultIpGateway;
-                if (p.Description.Length > 25)
-                    lblNetworkInterface.Text = p.Description.Substring(0, 23) + "...";
+                profileSelected = profiles[Int32.Parse(lstProfiles.SelectedIndex.ToString())];
+                lblIPAddress.Text = !profileSelected.IpAddress.Trim().Equals("") ? profileSelected.IpAddress : TranslateUtil.GetAutomaticallyTxt();
+                lblDNSServer.Text = !profileSelected.DnsServerSearchOrder.Trim().Equals("") ? profileSelected.DnsServerSearchOrder : TranslateUtil.GetAutomaticallyTxt();
+                lblGateway.Text = !profileSelected.DefaultIpGateway.Trim().Equals("") ? profileSelected.DefaultIpGateway : TranslateUtil.GetAutomaticallyTxt();
+                if (profileSelected.Description.Length > 25)
+                    lblNetworkInterface.Text = profileSelected.Description.Substring(0, 23) + "...";
                 else
-                    lblNetworkInterface.Text = p.Description;
+                    lblNetworkInterface.Text = profileSelected.Description;
             }
             catch {
                 MessageBox.Show("Error testing...!");
             }
         }
 
-        
+        private void tsbSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TabProfiles.SelectedIndex == 1)
+                {
+                    Profile p = new Profile();
+                    ProfileHelper pHelper = new ProfileHelper();
 
+                    NetworkInterface ni = NetworkInterfaceHelper.GetByMACNetworkInterface(cmbInterfaces.SelectedValue.ToString());
+
+                    p.Caption = ni.Caption;                    
+                    p.Description = ni.Description;
+                    p.DhcpEnabled = rdbDNSAutomatically.Checked;
+                    if (!p.DhcpEnabled)                    
+                    {
+                        p.DefaultIpGateway = txtGateway.Text;
+                        p.IpSubnet = txtIPSubnet.Text;
+                        p.MacAddress = ni.MACAddress;
+                        p.IpAddress = txtIPAddress.Text;
+                    }
+                    
+                    if (!rdbDNSAutomatically.Checked)
+                        p.DnsServerSearchOrder = txtDNSServer.Text;
+                    
+                    p.ProfileName = txtProfile.Text;
+                    p.ServiceName = ni.ServiceName;
+                    p.SettingId = ni.SettingID;
+                    
+
+                    pHelper.Add(p);
+                    LoadProfiles();
+                    LoadNew();
+                    MessageBox.Show("Saved...!");
+
+                }
+            }
+            catch {
+                MessageBox.Show("Error saving...!");
+            }
+        }
+
+        private void cmbInterfaces_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tsbDelete_Click(object sender, EventArgs e)
+        {
+            if (TabProfiles.SelectedIndex == 0)
+            {
+                try{
+                    ProfileHelper profileHelper = new ProfileHelper();
+                    Profile profile = new Profile
+                    {
+                         IdProfile = Int32.Parse(lstProfiles.SelectedValue.ToString())
+                    };
+                    profileHelper.Delete(profile);
+                    profileSelected = null;
+                    LoadProfiles();     
+                }catch{}
+            }
+        }
+
+        private void tsbNew_Click(object sender, EventArgs e)
+        {
+            TabProfiles.SelectedTab = tabNew;
+        }
+
+        private void tsbApply_Click(object sender, EventArgs e)
+        {
+            if (TabProfiles.SelectedTab == tabProfile)
+            {
+                try
+                {
+                    if (lstProfiles.SelectedValue != null)
+                    {
+                        if (!profileSelected.DhcpEnabled)
+                        {
+                            if (!NetworkInterfaceHelper.SetIP(profileSelected.MacAddress, profileSelected.IpAddress, profileSelected.IpSubnet, profileSelected.DefaultIpGateway))
+                            {
+                                MessageBox.Show("Network Interface not found!", "Setting");
+                            }
+                        }
+                        else
+                        {
+                            NetworkInterfaceHelper.SetEnabledDHCP(profileSelected.MacAddress);                            
+                        }
+
+                        if (!profileSelected.DnsServerSearchOrder.Trim().Equals(String.Empty))
+                        {
+                            if (!NetworkInterfaceHelper.SetDNS(profileSelected.MacAddress, profileSelected.DnsServerSearchOrder))
+                            {
+                                MessageBox.Show("DNS error, Network Interface not found!", "Setting");
+                            }
+                        }
+                        else
+                        {
+                            NetworkInterfaceHelper.SetDNSAutomatically(profileSelected.MacAddress);
+                        }
+                    }else
+                        MessageBox.Show("Selected perfil.","Setting");
+                }
+                catch (Exception e1){
+                    MessageBox.Show("Error apply");
+                }
+            }
+        }
     }
 }

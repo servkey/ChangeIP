@@ -24,9 +24,25 @@ namespace ChangeIPAdress.Util
 
         }
 
+        private static string Get(string name)
+        {
+            return resourceManager.GetString(name);
+        }
+
+        public static string GetProfileTxt()
+        {
+            return Get("txtProfileTxt");
+        }
+
+        public static string GetAutomaticallyTxt()
+        {
+            return Get("lblAutomaticallyTxt");
+        }
+
         public static void Translate(params Control[] controls) 
         {
-            foreach(Control c in controls)
+
+            foreach(Control c in controls)                
                 c.Text = resourceManager.GetString(c.Name + "Txt");
             //element.Name  
         }

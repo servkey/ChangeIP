@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="Util\ControlUtil.cs" />
     <Compile Include="Util\SettingUtil.cs" />
     <Compile Include="Util\TranslateUtil.cs" />
     <Compile Include="Win\FrmMain.cs">
@@ -112,7 +113,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Setting\settings.s3db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

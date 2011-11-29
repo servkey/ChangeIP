@@ -16,13 +16,32 @@ namespace ChangeIPAddressLibrary.Core
         }
 
         public void Add(Base.Profile e)
-        {            
-              
+        {
+            try
+            {
+                DBLiteConnection db = new DBLiteConnection();
+                String query = String.Format(Base.Profile.IPROFILES, "null", e.ProfileName, Convert.ToInt32(e.DhcpEnabled).ToString(), e.IpAddress, e.IpSubnet, e.DefaultIpGateway, e.DnsServerSearchOrder, e.MacAddress, e.SettingId, e.Caption, e.ServiceName, e.Description);
+                db.ExecuteNonQuery(query);                
+            }
+            catch
+            {
+                throw new ExceptionIP.ProfileException();
+            }
+            
         }
 
         public void Delete(Base.Profile e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DBLiteConnection db = new DBLiteConnection();
+                String query = String.Format(Base.Profile.DPROFILES, e.IdProfile);
+                db.ExecuteNonQuery(query);
+            }
+            catch
+            {
+                throw new ExceptionIP.ProfileException();
+            }
         }
 
         public Base.Profile GetProfile(Base.Profile e)
@@ -56,7 +75,6 @@ namespace ChangeIPAddressLibrary.Core
                     };
                     profiles.Add(profile);                    
                 }
-
             }
             catch (Exception e)
             {
