@@ -191,8 +191,8 @@ namespace ChangeIPAdress.Win
 
                     p.Caption = ni.Caption;                    
                     p.Description = ni.Description;
-                    p.DhcpEnabled = rdbDNSAutomatically.Checked;
-                    if (!p.DhcpEnabled)                    
+                    p.DhcpEnabled = this.rdbIpAutomatically.Checked;
+                    if (p.DhcpEnabled)                    
                     {
                         p.DefaultIpGateway = txtGateway.Text;
                         p.IpSubnet = txtIPSubnet.Text;
