@@ -193,40 +193,40 @@
             // tsmNew
             // 
             this.tsmNew.Name = "tsmNew";
-            this.tsmNew.Size = new System.Drawing.Size(152, 22);
+            this.tsmNew.Size = new System.Drawing.Size(107, 22);
             this.tsmNew.Text = "New...";
             this.tsmNew.Click += new System.EventHandler(this.tsbNew_Click);
             // 
             // tsmSave
             // 
             this.tsmSave.Name = "tsmSave";
-            this.tsmSave.Size = new System.Drawing.Size(152, 22);
+            this.tsmSave.Size = new System.Drawing.Size(107, 22);
             this.tsmSave.Text = "Save";
             this.tsmSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
             // tsmApply
             // 
             this.tsmApply.Name = "tsmApply";
-            this.tsmApply.Size = new System.Drawing.Size(152, 22);
+            this.tsmApply.Size = new System.Drawing.Size(107, 22);
             this.tsmApply.Text = "Apply";
             this.tsmApply.Click += new System.EventHandler(this.tsbApply_Click);
             // 
             // tsmDelete
             // 
             this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmDelete.Size = new System.Drawing.Size(107, 22);
             this.tsmDelete.Text = "Delete";
             this.tsmDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(104, 6);
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(152, 22);
+            this.tsmExit.Size = new System.Drawing.Size(107, 22);
             this.tsmExit.Text = "Exit";
             this.tsmExit.Click += new System.EventHandler(this.tsbExit_Click);
             // 
@@ -244,13 +244,13 @@
             this.tsmLEnglish,
             this.tsmLSpanish});
             this.tsmLanguage.Name = "tsmLanguage";
-            this.tsmLanguage.Size = new System.Drawing.Size(152, 22);
+            this.tsmLanguage.Size = new System.Drawing.Size(126, 22);
             this.tsmLanguage.Text = "Language";
             // 
             // tsmLEnglish
             // 
             this.tsmLEnglish.Name = "tsmLEnglish";
-            this.tsmLEnglish.Size = new System.Drawing.Size(152, 22);
+            this.tsmLEnglish.Size = new System.Drawing.Size(115, 22);
             this.tsmLEnglish.Text = "English";
             this.tsmLEnglish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
@@ -258,7 +258,7 @@
             // 
             this.tsmLSpanish.CheckOnClick = true;
             this.tsmLSpanish.Name = "tsmLSpanish";
-            this.tsmLSpanish.Size = new System.Drawing.Size(152, 22);
+            this.tsmLSpanish.Size = new System.Drawing.Size(115, 22);
             this.tsmLSpanish.Text = "Spanish";
             this.tsmLSpanish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
@@ -273,7 +273,7 @@
             // tsmAbout
             // 
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(152, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(116, 22);
             this.tsmAbout.Text = "About...";
             this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
@@ -288,7 +288,7 @@
             this.TabProfiles.SelectedIndex = 0;
             this.TabProfiles.Size = new System.Drawing.Size(320, 343);
             this.TabProfiles.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.TabProfiles.TabIndex = 3;
+            this.TabProfiles.TabIndex = 1;
             this.TabProfiles.SelectedIndexChanged += new System.EventHandler(this.TabProfiles_SelectedIndexChanged);
             // 
             // tabProfile
@@ -446,7 +446,7 @@
             this.rdbSpecifyDNS.Location = new System.Drawing.Point(46, 255);
             this.rdbSpecifyDNS.Name = "rdbSpecifyDNS";
             this.rdbSpecifyDNS.Size = new System.Drawing.Size(206, 17);
-            this.rdbSpecifyDNS.TabIndex = 1;
+            this.rdbSpecifyDNS.TabIndex = 6;
             this.rdbSpecifyDNS.TabStop = true;
             this.rdbSpecifyDNS.Text = "Use the following DNS Server address";
             this.rdbSpecifyDNS.UseVisualStyleBackColor = false;
@@ -460,7 +460,7 @@
             this.pnlIPs.Location = new System.Drawing.Point(33, 81);
             this.pnlIPs.Name = "pnlIPs";
             this.pnlIPs.Size = new System.Drawing.Size(239, 150);
-            this.pnlIPs.TabIndex = 7;
+            this.pnlIPs.TabIndex = 4;
             // 
             // rdbSpecifyIp
             // 
@@ -469,7 +469,7 @@
             this.rdbSpecifyIp.Location = new System.Drawing.Point(12, 26);
             this.rdbSpecifyIp.Name = "rdbSpecifyIp";
             this.rdbSpecifyIp.Size = new System.Drawing.Size(128, 17);
-            this.rdbSpecifyIp.TabIndex = 1;
+            this.rdbSpecifyIp.TabIndex = 2;
             this.rdbSpecifyIp.TabStop = true;
             this.rdbSpecifyIp.Text = "Specify an IP address";
             this.rdbSpecifyIp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -483,7 +483,7 @@
             this.rdbIpAutomatically.Location = new System.Drawing.Point(12, 8);
             this.rdbIpAutomatically.Name = "rdbIpAutomatically";
             this.rdbIpAutomatically.Size = new System.Drawing.Size(174, 17);
-            this.rdbIpAutomatically.TabIndex = 0;
+            this.rdbIpAutomatically.TabIndex = 1;
             this.rdbIpAutomatically.TabStop = true;
             this.rdbIpAutomatically.Text = "Obtain IP Address automatically";
             this.rdbIpAutomatically.UseVisualStyleBackColor = true;
@@ -508,7 +508,7 @@
             this.txtGateway.Location = new System.Drawing.Point(75, 85);
             this.txtGateway.Name = "txtGateway";
             this.txtGateway.Size = new System.Drawing.Size(139, 20);
-            this.txtGateway.TabIndex = 2;
+            this.txtGateway.TabIndex = 3;
             // 
             // lblGatewayTxt
             // 
@@ -524,7 +524,7 @@
             this.txtIPAddress.Location = new System.Drawing.Point(75, 25);
             this.txtIPAddress.Name = "txtIPAddress";
             this.txtIPAddress.Size = new System.Drawing.Size(139, 20);
-            this.txtIPAddress.TabIndex = 0;
+            this.txtIPAddress.TabIndex = 1;
             // 
             // lblIPSubnetTxt
             // 
@@ -540,7 +540,7 @@
             this.txtIPSubnet.Location = new System.Drawing.Point(75, 55);
             this.txtIPSubnet.Name = "txtIPSubnet";
             this.txtIPSubnet.Size = new System.Drawing.Size(139, 20);
-            this.txtIPSubnet.TabIndex = 1;
+            this.txtIPSubnet.TabIndex = 2;
             // 
             // lblIPAddressTxt
             // 
@@ -556,7 +556,7 @@
             this.txtProfile.Location = new System.Drawing.Point(108, 12);
             this.txtProfile.Name = "txtProfile";
             this.txtProfile.Size = new System.Drawing.Size(159, 20);
-            this.txtProfile.TabIndex = 3;
+            this.txtProfile.TabIndex = 1;
             this.txtProfile.Text = "New Profile...";
             // 
             // lblTProfile
@@ -575,7 +575,7 @@
             this.rdbDNSAutomatically.Location = new System.Drawing.Point(46, 235);
             this.rdbDNSAutomatically.Name = "rdbDNSAutomatically";
             this.rdbDNSAutomatically.Size = new System.Drawing.Size(221, 17);
-            this.rdbDNSAutomatically.TabIndex = 0;
+            this.rdbDNSAutomatically.TabIndex = 5;
             this.rdbDNSAutomatically.TabStop = true;
             this.rdbDNSAutomatically.Text = "Obtain DNS Server Address automatically";
             this.rdbDNSAutomatically.UseVisualStyleBackColor = true;
@@ -586,7 +586,7 @@
             this.lblTNetworkInterfaceCmb.Location = new System.Drawing.Point(110, 40);
             this.lblTNetworkInterfaceCmb.Name = "lblTNetworkInterfaceCmb";
             this.lblTNetworkInterfaceCmb.Size = new System.Drawing.Size(92, 13);
-            this.lblTNetworkInterfaceCmb.TabIndex = 4;
+            this.lblTNetworkInterfaceCmb.TabIndex = 3;
             this.lblTNetworkInterfaceCmb.Text = "Network Interface";
             // 
             // cmbInterfaces
@@ -598,7 +598,7 @@
             this.cmbInterfaces.Location = new System.Drawing.Point(39, 56);
             this.cmbInterfaces.Name = "cmbInterfaces";
             this.cmbInterfaces.Size = new System.Drawing.Size(227, 21);
-            this.cmbInterfaces.TabIndex = 5;
+            this.cmbInterfaces.TabIndex = 2;
             this.cmbInterfaces.SelectedIndexChanged += new System.EventHandler(this.cmbInterfaces_SelectedIndexChanged);
             // 
             // grpDNSServer
@@ -609,7 +609,7 @@
             this.grpDNSServer.Location = new System.Drawing.Point(38, 259);
             this.grpDNSServer.Name = "grpDNSServer";
             this.grpDNSServer.Size = new System.Drawing.Size(227, 53);
-            this.grpDNSServer.TabIndex = 3;
+            this.grpDNSServer.TabIndex = 7;
             this.grpDNSServer.TabStop = false;
             // 
             // lblTDNSServerTxt

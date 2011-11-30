@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ChangeIPAdress.Util;
 using ChangeIPAddressLibrary.Base;
 using ChangeIPAddressLibrary.Core;
+using System.Threading;
 
 namespace ChangeIPAdress.Win
 {
@@ -263,12 +264,12 @@ namespace ChangeIPAdress.Win
                     pHelper.Add(p);
                     LoadProfiles();
                     LoadNew();
-                    MessageBox.Show(TranslateUtil.GetMsgSavedProfile(), this.Text,MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, TranslateUtil.GetMsgSavedProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
             catch {
-                MessageBox.Show(TranslateUtil.GetMsgErrorProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, TranslateUtil.GetMsgErrorProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -289,7 +290,7 @@ namespace ChangeIPAdress.Win
                         {
                             IdProfile = Int32.Parse(lstProfiles.SelectedValue.ToString())
                         };
-                        DialogResult r = MessageBox.Show(String.Format(TranslateUtil.GetMsgConfirmDelete(), ((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult r = MessageBox.Show(this, String.Format(TranslateUtil.GetMsgConfirmDelete(), ((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (r == DialogResult.Yes) 
                         {
@@ -299,7 +300,7 @@ namespace ChangeIPAdress.Win
                         }
                     }
                     else
-                        MessageBox.Show(TranslateUtil.GetMsgSelectProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(this, TranslateUtil.GetMsgSelectProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         
                 }catch{}
             }
@@ -310,6 +311,14 @@ namespace ChangeIPAdress.Win
             TabProfiles.SelectedTab = tabNew;
         }
 
+        private void StartDHCPRenew()
+        {
+            NetworkInterfaceHelper.SetEnabledDHCP(profileSelected.MacAddress);
+            MessageBox.Show(this, String.Format(TranslateUtil.GetMsgAppliedProfile(), ((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txtConsole.Text = NetworkInterfaceHelper.GetActiveConnection();
+
+        }
+
         private void tsbApply_Click(object sender, EventArgs e)
         {
             if (TabProfiles.SelectedTab == tabProfile)
@@ -318,25 +327,26 @@ namespace ChangeIPAdress.Win
                 {
                     if (lstProfiles.SelectedValue != null)
                     {
+                      
                         bool error = false;
                         if (!profileSelected.DhcpEnabled)
                         {
                             if (!(NetworkInterfaceHelper.SetIP(profileSelected.MacAddress, profileSelected.IpAddress, profileSelected.IpSubnet, profileSelected.DefaultIpGateway)))
                             {
-                                MessageBox.Show(TranslateUtil.GetMsgErrorNetworkInterface(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(this, TranslateUtil.GetMsgErrorNetworkInterface(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 error = true;
                             }
                         }
                         else
-                        {
-                            NetworkInterfaceHelper.SetEnabledDHCP(profileSelected.MacAddress);                            
+                        {                           
+                            new Thread(StartDHCPRenew).Start();                             
                         }
 
                         if (!profileSelected.DnsServerSearchOrder.Trim().Equals(String.Empty))
                         {
                             if (!(NetworkInterfaceHelper.SetDNS(profileSelected.MacAddress, profileSelected.DnsServerSearchOrder)))
                             {
-                                MessageBox.Show(TranslateUtil.GetMsgErrorDNSNetworkInterface(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(this, TranslateUtil.GetMsgErrorDNSNetworkInterface(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 error = true;
                             }
                         }
@@ -345,19 +355,19 @@ namespace ChangeIPAdress.Win
                             NetworkInterfaceHelper.SetDNSAutomatically(profileSelected.MacAddress);
                         }
 
-                        if (!error)
+                        if (!error && !profileSelected.DhcpEnabled)
                         {
-                            MessageBox.Show(String.Format(TranslateUtil.GetMsgAppliedProfile(), ((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(this, String.Format(TranslateUtil.GetMsgAppliedProfile(), ((Profile)lstProfiles.SelectedItem).ProfileName), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtConsole.Text = NetworkInterfaceHelper.GetActiveConnection();
                         }
 
                     }else
-                        MessageBox.Show(TranslateUtil.GetMsgSelectProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(this, TranslateUtil.GetMsgSelectProfile(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     
                 }
                 catch{
-                    MessageBox.Show(TranslateUtil.GetMsgErrorSetting(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(this, TranslateUtil.GetMsgErrorSetting(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

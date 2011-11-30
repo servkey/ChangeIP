@@ -75,9 +75,12 @@ namespace ChangeIPAddressLibrary.Core
                 using (var networkConfigs = networkConfigMng.GetInstances())
                 {
 
-                    foreach (var managementObject in networkConfigs.Cast<ManagementObject>().Where(managementObject => (bool)managementObject["IPEnabled"]))                                         
+                    foreach (var managementObject in networkConfigs.Cast<ManagementObject>().Where(managementObject => (bool)managementObject["IPEnabled"]))
                         if (managementObject.GetPropertyValue("MACAddress").ToString().Equals(macAddress))
-                            managementObject.InvokeMethod("EnableDHCP", null);                      
+                        {
+                            managementObject.InvokeMethod("EnableDHCP", null);
+                            managementObject.InvokeMethod("RenewDHCPLease", null);                            
+                        }
                 }
             }           
         }
