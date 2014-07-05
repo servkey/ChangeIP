@@ -6,13 +6,14 @@ using System.Threading;
 using System.Resources;
 using System.Globalization;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace ChangeIPAdress.Util
 {
     class TranslateUtil
     {
-        private static ResourceManager resourceManager = new ResourceManager("ChangeIPAdress.Resources.ChangeIPWin", typeof(Win.FrmMain).Assembly);
-         //Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
+        //ChangeIPWin.es-MX
+        private static ResourceManager resourceManager = new ResourceManager("ChangeIPAdress.Resources.ChangeIPWin", Assembly.GetExecutingAssembly());
          
         
         public static void InitLanguage(){
@@ -28,7 +29,12 @@ namespace ChangeIPAdress.Util
         {
             return resourceManager.GetString(name);
         }
-                
+
+        public static string GetErrorDB()
+        {
+            return Get("lblErrorDBTxt");
+        }
+        
        
         public static string GetSeparator()
         {
@@ -90,7 +96,7 @@ namespace ChangeIPAdress.Util
 
         public static void Translate(params Control[] controls) 
         {
-
+            
             foreach(Control c in controls)                
                 c.Text = resourceManager.GetString(c.Name + "Txt");
             //element.Name  

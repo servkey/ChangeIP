@@ -253,7 +253,7 @@
     <value>Nuevo...</value>
   </data>
   <data name="tsmPreferenceTxt" xml:space="preserve">
-    <value>Preferencia</value>
+    <value>Preferencias</value>
   </data>
   <data name="tsmProfileTxt" xml:space="preserve">
     <value>Perfil</value>
@@ -263,5 +263,8 @@
   </data>
   <data name="txtProfileTxt" xml:space="preserve">
     <value>Nuevo perfil...</value>
+  </data>
+  <data name="lblErrorDBTxt" xml:space="preserve">
+    <value>Error al cargar información.</value>
   </data>
 </root>

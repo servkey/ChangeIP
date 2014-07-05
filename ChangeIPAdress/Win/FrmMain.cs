@@ -10,6 +10,8 @@ using ChangeIPAdress.Util;
 using ChangeIPAddressLibrary.Base;
 using ChangeIPAddressLibrary.Core;
 using System.Threading;
+using System.IO;
+using System.Reflection;
 
 namespace ChangeIPAdress.Win
 {
@@ -20,35 +22,46 @@ namespace ChangeIPAdress.Win
         public FrmMain()
         {
             InitializeComponent();
-                
-            //Esto cambiara
-            if (SettingUtil.GetLanguage().Equals(SettingUtil.GetLanguageEs()))
-                tsmLSpanish.Checked = true;
-            else
-                tsmLEnglish.Checked = true;
+            try
+            {
 
-            LoadProfiles();
-            SettingProfiles();
-            LoadInterfaces();
+                Uri dir = new Uri(Assembly.GetExecutingAssembly().CodeBase);
+                FileInfo fi = new FileInfo(dir.AbsolutePath);
+                string appropriateFile = Path.Combine(fi.Directory.FullName, "System.Data.SQLite.dll");
+                Assembly.LoadFrom(appropriateFile);
+   
+                //Esto cambiara
+                if (SettingUtil.GetLanguage().Equals(SettingUtil.GetLanguageEs()))
+                    tsmLSpanish.Checked = true;
+                else
+                    tsmLEnglish.Checked = true;
+
+                LoadProfiles();
+                SettingProfiles();
+                LoadInterfaces();
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(TranslateUtil.GetErrorDB() + ", " + e.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
         private void ResetNew()
         {
-
-            
+       
         }
 
         private void LoadNew()
-        {
-            //
-         
+        {         
             ControlUtil.Clear(txtGateway, txtDNSServer, txtProfile, txtIPSubnet, txtIPAddress);
             rdbDNSAutomatically.Checked = true;
             rdbIpAutomatically.Checked = true;
             txtProfile.Text = TranslateUtil.GetProfileTxt();
             txtProfile.SelectionStart = 0;
             txtProfile.SelectionLength = txtProfile.Text.Length;
-            txtProfile.Focus();
-            ///
+            txtProfile.Focus();            
         }
 
         private void SettingNew()
@@ -149,11 +162,24 @@ namespace ChangeIPAdress.Win
              );
         }
 
+        private static string GetAppropriateSQLLiteAssembly()
+        {
+            string pa = Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE");
+            string arch = ((String.IsNullOrEmpty(pa) || String.Compare(pa, 0, "x86", 0, 3, true) == 0) ? "32" : "64");
+            return "System.Data.SQLite.x" + arch + ".DLL";
+        }
+
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            Util.TranslateUtil.InitLanguage();            
-            txtConsole.Text = NetworkInterfaceHelper.GetActiveConnection();
-            ReloadLanguage();        
+            try
+            {
+                Util.TranslateUtil.InitLanguage();
+                txtConsole.Text = NetworkInterfaceHelper.GetActiveConnection();
+                ReloadLanguage();
+            }
+            catch (Exception e1){
+                MessageBox.Show(this,e1.Message);
+            }
         }
         
         private void SaveSetting()
@@ -240,7 +266,6 @@ namespace ChangeIPAdress.Win
                 {
                     Profile p = new Profile();
                     ProfileHelper pHelper = new ProfileHelper();
-
                     NetworkInterface ni = NetworkInterfaceHelper.GetByMACNetworkInterface(cmbInterfaces.SelectedValue.ToString());
 
                     p.Caption = ni.Caption;                    

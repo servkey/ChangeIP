@@ -214,7 +214,7 @@ namespace ChangeIPAddressLibrary.Core
                         }
                         catch { }
                     }
-                }
+                } 
             }
             return networks;
         }

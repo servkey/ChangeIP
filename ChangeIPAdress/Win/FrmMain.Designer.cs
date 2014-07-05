@@ -235,8 +235,8 @@
             this.tsmPreference.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmLanguage});
             this.tsmPreference.Name = "tsmPreference";
-            this.tsmPreference.Size = new System.Drawing.Size(75, 20);
-            this.tsmPreference.Text = "Preference";
+            this.tsmPreference.Size = new System.Drawing.Size(80, 20);
+            this.tsmPreference.Text = "Preferences";
             // 
             // tsmLanguage
             // 
@@ -244,13 +244,13 @@
             this.tsmLEnglish,
             this.tsmLSpanish});
             this.tsmLanguage.Name = "tsmLanguage";
-            this.tsmLanguage.Size = new System.Drawing.Size(126, 22);
+            this.tsmLanguage.Size = new System.Drawing.Size(152, 22);
             this.tsmLanguage.Text = "Language";
             // 
             // tsmLEnglish
             // 
             this.tsmLEnglish.Name = "tsmLEnglish";
-            this.tsmLEnglish.Size = new System.Drawing.Size(115, 22);
+            this.tsmLEnglish.Size = new System.Drawing.Size(152, 22);
             this.tsmLEnglish.Text = "English";
             this.tsmLEnglish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
@@ -258,7 +258,7 @@
             // 
             this.tsmLSpanish.CheckOnClick = true;
             this.tsmLSpanish.Name = "tsmLSpanish";
-            this.tsmLSpanish.Size = new System.Drawing.Size(115, 22);
+            this.tsmLSpanish.Size = new System.Drawing.Size(152, 22);
             this.tsmLSpanish.Text = "Spanish";
             this.tsmLSpanish.Click += new System.EventHandler(this.tsmEnglish_Click);
             // 
